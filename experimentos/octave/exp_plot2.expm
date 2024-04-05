@@ -1,0 +1,27 @@
+NOMBRE: Dibujando pulsos
+OBJETIVO: Pintar señales discretas
+REQUISITO: exp_plot1
+REQUISITO: exp_bloque_graficos
+
+A veces es más claro, mostrar los datos como frente de pulsos. En cuyo
+caso, se emplea la función f:stem de forma similar a f:plot.
+
+EJEMPLO-IN: A=[ zeros(1,10) ones(1,5) zeros(1,10) ] , stem(A)
+
+TAREA
+
+* Léase la ayuda de f:stem y compárese con la de f:plot ¿Cuáles son
+  las diferencias?
+
+* En el ejemplo anterior, el gráfico está ajustado a los datos. ¿Cómo
+  se puede hacer para que haya un poco de espacio en la parte superior
+  e inferior de la gráfica? (avanzada: requiere de conocimientos que
+  no se han incluido en el tutorial)
+
+# Requiere la manipulación del handle de la gráfica:
+#
+# set(gca(),"ylim",[-0.2  1.2])
+#
+## gca() devuelve el handle de los ejes actuales (de la gráfica actual)
+
+SINVERIFICACION

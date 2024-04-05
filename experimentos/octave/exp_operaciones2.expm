@@ -1,0 +1,26 @@
+NOMBRE: Operaciones básicas 2
+OBJETIVO: Empleo de funciones básicas
+REQUISITO: exp_bloque_escalar
+REQUISITO: exp_formatonumero
+
+También hay otras funciones más elaboradas como: 
+ Funciones trigonométricas (en radianes): sin, cos, tan
+ Otras funciones como : abs (valor absoluto), log, log10 o sqrt (raiz cuadrada)
+ 
+Para más información sobre una función de octave usa la función f:help o f:doc.
+
+EJEMPLO-IN: help sin
+EJEMPLO-IN: doc sin
+ 
+TAREA
+ 
+* Lee la ayuda de las funciones f:sin y del operador "+"
+
+La definición de logaritmo en base b de un número n es:
+    log(n)/log(b)
+siendo log la definición de un logaritmo en otra base (10 o e normalmente)
+ 
+* Asigna a q:s el logaritmo en base 3 de 10
+VARIABLE: s,0
+#PREVERIFICACION: disp(s)
+VERIFICACION: s == log_3(10) CONDICION comparafloat(3^s,10,1e-9)

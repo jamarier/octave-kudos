@@ -1,0 +1,60 @@
+NOMBRE: Medida de rendimiento
+REQUISITO: exp_while
+REQUISITO: exp_programacion
+
+Es importante entender que muchos de los algoritmos de procesamiento
+de datos aunque más o menos sencillos, hay que aplicarlos a miles o
+millones de datos (una imagen en color de 10Mpixels tiene 30 millones de
+datos). 
+
+Por tanto, es muy conveniente entender los mecanismos básicos de
+octave para emplear aquellos patrones más eficientes. 
+
+Octave tiene dos tipos de funciones distintas, funciones compiladas y
+funciones interpretadas. Las funciones compiladas se ejecutan en
+código máquina y son muy rápidas. Las funciones interpretadas se
+ejecutan leyendo línea a línea el fichero de definición de la función
+y procesando y ejecutando cada línea por separado. 
+
+Según el caso, el empleo de funciones interpretadas puede penalizar en
+3 órdenes de magnitud el tiempo de ejecución. Emplear una instrucción
+de repetición para llenar un vector de 1 puede ser 1000 veces más
+lento que usar la función f:ones
+
+Para hacerse una idea de la velocidad de ejecución de una función o
+script se pueden usar las funciones f:tic y f:toc. Estas sirven para
+medir el tiempo transcurrido entre sus llamadas. Y puede emplearse 
+
+EJEMPLO-IN: tic, det(magic(300)), toc
+
+TAREA
+
+Si A=magic(300)
+
+* Determínese el orden de eficiencia en los siguientes enfoques. Para
+  ello mídase el tiempo de ejecución varias veces por cada enfoque y
+  quédese con la media.
+
+  * B=A^20
+  * B=A*A*A*A*A*A*A*A*A*A*A*A*A*A*A*A*A*A*A*A 
+  * B=1; for i=1:20; B=B*A; endfor
+
+* Repítase con 
+  * B=A^200
+  * B=1; for i = 1:200; B=B*A; endfor
+
+* Repítase con 
+  * B=A^2000
+  * B=1; for i = 1:2000; B=B*A; endfor
+
+* Saque conclusiones sobre el crecimiento del tiempo en función de las
+  iteraciones en código interpretado y compilado.
+
+* EXTRA: Cree una función que determine las duraciones medias de las
+  operaciones descritas siguiendo el siguiente prototipo: 
+
+  [durcompilado durinterpretado] = function duracion (matrizA, potencia, repeticionesMedia)
+
+  y haga una gráfica para ver la relación visualmente.
+
+SINVERIFICACION

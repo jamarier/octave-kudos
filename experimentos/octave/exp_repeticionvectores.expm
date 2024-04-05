@@ -1,0 +1,50 @@
+NOMBRE: Otros técnicas de composición de vectores y matrices
+AUTOR: Javier M Mora
+REQUISITO: exp_bloque_vectores_matrices
+REQUISITO: exp_h17_19_21
+REQUISITO: exp_h24_25
+
+Cuando la matriz a componer se trata de una repetición de matrices más
+elementales, se puede usar la instrucción f:repmat. 
+
+La instrucción repmat(A,M,N) crea una supermatriz de M filas y N
+columnas en la que cada elemento corresponde a la matriz A original.
+
+En función de los valores de A, M y N se pueden crear, entre otras,
+las siguientes combinaciones:
+
+Alargar un vector: 
+EJEMPLO-IN: A=[1 2 3], repmat(A, 1, 3)
+
+Repetir un vector en varias filas: 
+EJEMPLO-IN: A=[1 2 3], repmat(A, 3, 1)
+
+Alargar un vector columna:
+EJEMPLO-IN: A=[1;2;3], repmat(A, 3, 1)
+
+Si no se suministra el parámetro N a f:repmat, se considerará que las
+repeticiones en horizontal y vertical serán las mismas (M).
+
+
+Otra función que existe para diseñar repeticiones (De vectores en este caso) es: f:repelems. 
+
+TAREA
+
+VARIABLE: A,0
+
+* Asigne en A la matriz: 
+  1 0 1 0 1 0 
+  0 1 0 1 0 1
+  1 0 1 0 1 0 
+  1 0 0 1 0 1
+VERIFICACION: Variable de ayuda CONDICION comparamatriz(A,repmat(eye(2),2,3))
+
+VARIABLE: B,0
+
+* Leer la ayuda de f:repelems.
+
+* Construir un vector, con la ayuda de f:repelems cuyos primeros 50
+  elementos sean igual a 1, seguido de 50 elementos igual a 0, de 10
+  elementos igual a 2 y nuevamente 10 elementos igual a 1.
+
+VERIFICACION: Composicion B CONDICION comparamatriz(B,repelems([0 1 2],[2 1 3 2; 50 50 10 10]))

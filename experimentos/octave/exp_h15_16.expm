@@ -1,0 +1,25 @@
+NOMBRE: Rangos 2
+OBJETIVO: Tipos secundarios de rangos
+REQUISITO: exp_h12_13_14_27
+
+
+Existen otros tipos de rangos que pueden ser útiles. 
+
+* f:linspace calcula automáticamente el paso del rango para que el
+  número de elementos del rango coincida con el argumento dado.
+
+EJEMPLO-IN: linspace(1,11,10)
+EJEMPLO-OUT: linspace(1,11,10)
+
+* f:logspace esta función emplea una escala logarítmica. Es decir, la
+  razón entre dos elementos consecutivos del vector es constante.
+
+EJEMPLO-IN: logspace(1,2,3)
+EJEMPLO-OUT: logspace(1,2,3)
+
+TAREA
+
+* Constrúyase un vector entre 2 y 7 (inclusive) con 4 elementos cuya
+  razón entre elementos consecutivos sea constante y asígnese en A.
+VARIABLE: A,0
+VERIFICACION: Vector A CONDICION all(comparafloat(A,[2.0000   3.0366   4.6104   7.0000],1e-4))

@@ -1,0 +1,36 @@
+NOMBRE: Comparación entre matrices 
+REQUISITO: exp_h9
+REQUISITO: exp_repeticionvectores
+REQUISITO: exp_escalarmatriz
+
+Los operadores de comparación de matrices, aunque actúan comparando
+elemento a elemento se usan sin punto.
+
+* A < B, A == B
+
+Estos operadores requieren que ambas matrices tengan el mismo tamaño,
+y hacen una comparación, punto a punto. 
+
+Para obtener una respuesta única que indique que todos los elementos
+son iguales usamos la función f:all. Como esta función se aplica sobre
+columnas, es necesario hacer una vectorización o una doble llamada
+
+EXAMPLE-IN: all(all(A==B)), all((A==B)(:))
+
+Existe otra función que puede ser útil para procesar el resultado de
+comparaciones: f:any que devuelve un valor cierto (1) en el caso de
+que al menos un elemento sea cierto.
+
+EXAMPLE-IN: any(any(A<B)), any((A<B)(:))
+
+TAREA
+
+* Asigne a A la matriz identidad de rango 3. 
+
+* Asigne a B una matriz (3x3) con todos los valores igual a 0.5
+
+* Estudie el resultado de A<B y de B<A
+
+SINVERIFICACION
+
+

@@ -1,0 +1,81 @@
+NOMBRE: Bucles enumerados
+REQUISITO: exp_if
+REQUISITO: exp_programacion
+
+Un bucle for permite repetir una porción de código por cada valor
+presente en un vector. A diferencia de otros lenguajes, no es
+necesario que los valores del vector sean correlativos, estén
+ordenados o no se repitan
+
+Sintaxis básica:
+
+  for <indice> = <VECTOR>
+    <TAREAS para cada elemento de vector>
+  endfor
+
+El valor de la variable <indice> va tomando sucesivamente los valores
+de los elementos de <VECTOR> en cada iteración.
+
+Ejemplo de uso: 
+  
+  suma = 0;
+  A = (1:10)
+  for i = A
+    suma = suma + i;
+  endfor
+
+CUANDO NO USARLO
+
+La mayoría de los lenguajes de programación son secuenciales, actúan
+instrucción a instrucción. Octave, aunque realmente es secuencial
+también, tiene apariencia de sistema paralelo en las operaciones
+matriciales. Esto es: una operación tipo A+B suma, aparentemente,
+todos los elementos simultáneamente. 
+
+Por tanto, toda operación que requiera manipular los elementos de un
+vector o una matriz de forma que cada elemento solo dependa de si
+mismo y no de resultados anteriores, ha de buscarse una forma
+vectorizada de procesarse y evitar los bucles.
+
+Posible implementación de función doble: 
+
+  A = [1:1000]
+  for indice = 1:length(A)
+    B(indice) = A(indice)*2;
+  endfor
+
+Cada elemento de B depende del equivalente de A. En esta ocasión es
+más efectivo usar una operación vectorial:
+
+  B = A*2;
+
+Segundo caso de NO uso es cuando se pretende construir un acumulador:
+obtener una variable que dependen del conjunto de elementos. 
+
+En estas ocasiones hay que ver la existencia de comandos que efectúen
+estas operaciones de acumulación. Sobre el ejemplo anterior del
+calculo de la suma.
+
+  suma = sum(A);
+
+CUANDO USARLO
+
+En aquellos casos en los que el resultado de una iteración dependa de
+iteraciones anteriores. En general, si el resultado que se desea no
+depende del orden en el que se efectúan las iteraciones, no debe
+usarse un bucle for. En aquellos casos que el resultado es dependiente
+del orden de ejecución SI habrá que usar el bucle for.
+
+Ejemplo: cálculo de serie de fibonacci
+
+  Y(1)=1;
+  Y(2)=1;
+  for i = 3:10
+    Y(i) = Y(i-2)+Y(i-1);
+  endfor;
+
+para calcular el elemento Y(7) requiere que previamente esté calculado
+el Y(5) y el Y(6), luego el orden es importante y por tanto es
+necesario el bucle for.
+
+SINVERIFICACION

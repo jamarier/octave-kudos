@@ -1,0 +1,33 @@
+NOMBRE: La naturaleza de las cadenas
+OBJETIVO: Entender que una cadena no es más que un vector visto de otra forma
+REQUISITO: exp_h9
+REQUISITO: exp_repeticionvectores
+
+Una cadena no es más que un array de números enteros en el que cada
+número representa el código ascii de cada caracter. Por lo tanto se le
+aplican las mismas reglas de composición de los vectores. 
+
+Concatenación de cadenas: 
+EJEMPLO-IN: A='hola', B = [A ' y adios' ]
+
+Igualmente, se pueden aplicar distintos operadores
+
+EJEMPLO-IN: A='hola', A+1
+
+aunque en ese caso se pierde el caracter de cadena y el resultado se
+muestra numéricamente. 
+
+
+
+TAREA
+
+VARIABLE: A,'' 
+
+* Asigne a A la palabra "hola" 
+VERIFICACION: Cadena "hola" CONDICION comparastring(A,'hola')
+
+
+VARIABLE: B,''
+* Asigne a B una cadena con la palabra "hola" repetida 100 veces (sin
+  espacios)
+VERIFICACION: Cadena 'hola'x100 CONDICION comparastring(B,repmat(A,1,100))

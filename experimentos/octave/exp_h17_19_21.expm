@@ -1,0 +1,64 @@
+NOMBRE: Funciones útiles para crear matrices
+OBJETIVO: Funciones útiles para crear matrices 
+REQUISITO: exp_h8
+
+
+Existen una serie de funciones para facilitar la creación de matrices
+típicas o útiles. Estas funciones aceptan una serie de argumentos
+comunes: 
+
+* un número N: se desea que la matriz creada sea cuadrada de tamaño N
+
+* dos números M N: se desea que la matriz creada sea de dimensiones M
+  filas y N columnas
+
+* un vector de dos elementos [M N]: se desea que la matriz creada sea
+  de dimensiones M filas y N columnas. Este formato permite enlazar
+  directamente con la salida de la función size.
+
+
+Funciones:
+
+* f:eye: devuelve una matriz de ceros con la diagonal principal con
+  unos. En el caso de una matriz cuadrada es la matriz identidad.
+
+EJEMPLO-IN: eye(3)
+
+es la matriz identidad 3x3
+
+* f:ones: devuelve una matriz en la que todos los elementos son 1
+
+EJEMPLO-IN: ones(3,4)
+
+* f:zeros: devuelve una matriz en la que todos los elementos son 0
+
+EJEMPLO-IN: zeros(size(ones(3,4)))
+
+En este caso, la matriz de ceros tiene el mismo tamaño que la matriz
+ones(3,4) osea 3 filas y 4 columnas.
+
+Octave emplea asignación dinámica de memoria. Va asignando la memoria
+conforme lo va necesitando. Esto implica que ir añadiendo elementos a
+un vector o matriz es una tarea ineficiente ya que conforme esta crece
+hay que reservar más memoria y mover los datos de la antigua zona
+reservada a la nueva. 
+
+En los casos en los que se conozca el tamaño final del vector o
+matriz, es aconsejable reservar toda la memoria necesaria de una vez y
+así no requerir posteriores reservas. Una forma de hacer esto es
+empleando la función f:zeros:
+
+EJEMPLO-IN: zeros(1000,1000) 
+
+en este ejemplo se reserva espacio suficiente para albergar una matriz
+1000x1000 y se le da a todos los elementos valor inicial 0. 
+
+* f:magic: construye un cuadrado mágico. Con suma constante en cada fila
+  y columna. Es útil cuando se necesita una matriz con determinante no nulo.
+
+TAREA 
+
+Pruébense las distintas funciones y léase la ayuda asociada a las
+mismas.
+
+SINVERIFICACION

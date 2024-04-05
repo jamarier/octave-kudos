@@ -1,0 +1,52 @@
+NOMBRE: maxmin
+AUTOR: Pedro González Gordillo
+AUTOR: Javier M. Mora
+OBJETIVO: Definición de la función máximo y mínimo de octave
+REQUISITO: exp_cadenas
+REQUISITO: exp_comparacionmatriz
+REQUISITO: exp_h11_30
+
+Dado un array A, la función f:max nos devuelve el valor máximo dentro
+de ese array. De igual modo, la función f:min devuelve el menor valor
+del array. En el caso de elementos bidimensionales (como una matriz)
+las funciones f:max y f:min buscarán los máximos y mínimos
+respectivamente por cada columna.
+
+Primero vamos a probar a buscar el valor máximo y mínimo de q:A y 
+asignarselos a q:mx y q:mn respectivamente
+
+EJEMPLO-IN: A=[1,2,3,4,5], mx=max(A), mn=min(A)
+
+Ahora vamos a buscar el mínimo de q:V y su posición. Para ello 
+asignaremos la salida de f:min a dos variables.
+
+EJEMPLO-IN: V=[4, 3, 2, 1, 5, 6, 7], [x, i]=min(V)
+
+En este caso estamos asignando a q:x el menor valor de q:V y a q:i 
+su posición en el vector (Funciona de igual forma para f:max).
+
+Finalmente vamos a asignar los valores máximos de la matriz q:M a la
+ variable q:n mediante la función f:max.
+
+EJEMPLO-IN: M=[1, 2, 3; 4, 5 , 6], n=max(M)
+
+En el caso de una matriz, hay dos formas de determinar el máximo (mínimo)
+
+EJEMPLO-IN: M=magic(3), n=max(max(M))
+
+que calcula el máximo de cada columna y luego el máximo de los máximos.
+
+EJEMPLO-IN: M=magic(3), n=max(M(:))
+
+que vectoriza la matriz y luego calcula el máximo.
+
+TAREA
+
+* Dado un array q:B, asigne a la variable q:r el valor máximo del
+ array y a q:s su posición mediante el uso de la función f:max
+VARIABLE: r, 0
+VARIABLE: s, 0
+VARIABLE: B, [10,11,12,13,14,15,14,16,12,13,14,15,17,20,21,13,14,17,20,21,12,13,14,15,10,11,12,13,14,15,11,12,13,14,15,14,16,12,13,14,15,17,20,21,13,14,17,20,21,12,13,14,15,10,11,12,13,14,15,11,12,13,14,15,14,16,12,13,14,15,17,20,21,13,14,17,20,21,12,13,14,15,10,11,12,23,14,15,11,12,13,14,15,14,16,12,13,14,15,17,20,21,13,14,17,20,21,12,13,14,15,10,11,12,13,14,15]
+
+VERIFICACION: r CONDICION r==23 
+VERIFICACION: s CONDICION s==86

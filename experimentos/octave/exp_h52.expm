@@ -1,0 +1,51 @@
+NOMBRE: Operaciones básicas sobre matrices 
+OBJETIVO: Uso de operadores sobre matrices.
+REQUISITO: exp_h17_19_21
+REQUISITO: exp_escalarmatriz
+REQUISITO: exp_comparacionmatriz
+
+Las operaciones básicas sobre números también se pueden aplicar sobre
+matrices teniendo en cuenta que las operaciones son aplicadas según
+las reglas de álgebra de matrices. Esto es: 
+
+
+* Para sumar/restar 2 matrices, estos han de tener las mismas
+  dimensiones.
+
+* La multiplicaciones entre matrices sigue las normas matemáticas de
+  las matrices: El producto q:o de dos matrices q:a y q:b cumple que
+  cada elemento del resultado o(j,i) = sum a(j,n)*b(n,i). Por lo tanto
+  se requiere que las matrices que se multiplican tengan los tamaños
+  adecuados: Para que una matriz A pueda multiplicarse a B, han de
+  tener dimensiones MxN y NxO respectivamente. Y el resultado de la
+  multiplicación será MxO.
+
+* La división requiere que el divisor sea invertible. En caso
+  contrario dará un warning pero continuará con la operación.
+
+* Para poder calcular una potencia, la matriz original ha de ser
+  cuadrada. 
+
+* Los vectores son matrices con una fila o columna. Concretamente para
+  multiplicar dos vectores entre sí, han de tener ambos la misma
+  longitud y uno ha de ser vector fila y el otro vector columna. 
+
+  Una multiplicación de vectores es equivalente al producto escalar de
+  los mismos.
+
+EJEMPLO-IN: A= [1 2 3], B=[4 5 6], A*B'
+
+TAREA
+
+  * Defina A= eye(2), B=ones(2), C = [1 2; 3 4], D = [1 2 3; 4 5 6]
+  
+  * Calcule A*B, A*C, A*D a mano y verifique el resultado con octave
+
+  * Calcule B*A, B*C, D*A a mano y verifique el resultado con octave
+
+  * ¿Qué errores se obtienen cuando se intenta operaciones incorrectas
+    tales como A/B o A/D ? ¿Por qué el error en cada caso es distinto?
+
+SINVERIFICACION
+
+

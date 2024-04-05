@@ -1,0 +1,28 @@
+NOMBRE: Ayuda
+OBJETIVO: Localizando la ayuda del sistema tutorial
+REQUISITO: 
+
+Este tutorial pretende introducir características básicas en el manejo
+de octave/matlab. Para ello se presentan una serie de experimentos en
+los que se mostrará un texto dando información relevante al
+experimento y a continuación una descripción de las tareas a realizar
+para superar el experimento.
+
+El alumno debe leer el texto introductorio, probar los ejemplos
+mostrados y, una vez entendida la información, realizar las tareas que
+se encomienden antes de pasar al siguiente experimento.
+
+Cada vez que se pida escribir algo tiene que hacerse a continuación
+del prompt ">" y terminar pulsando la tecla "Enter".
+
+TAREA
+
+* Solicite la ayuda del sistema de experimentación escribiendo f:ayuda
+en el prompt de matlab.
+
+Se le mostrará los comandos disponibles de navegación y verificación
+de los experimentos.
+
+* Lea los comandos, pruébelos y vaya al experimento 1.
+
+SINVERIFICACION

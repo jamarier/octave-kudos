@@ -1,0 +1,24 @@
+NOMBRE: Operaciones con complejos 1
+OBJETIVO: Cómo se representan los números complejos
+REQUISITO: exp_bloque_escalar
+REQUISITO: exp_constante
+REQUISITO: exp_operaciones2
+
+Los números complejos se representan empleando la constante f:i.
+
+EJEMPLO-IN: i
+EJEMPLO-OUT: i
+
+EJEMPLO-IN: 2i
+EJEMPLO-OUT: 2i
+
+Un número complejo con parte real e imaginaria se representa como la suma de las dos partes
+
+EJEMPLO-IN: 3+4i
+EJEMPLO-OUT: 3+4i
+
+TAREA
+
+* Asigna a la variable q:s el número -i
+VARIABLE: s,0
+VERIFICACION: s == -i CONDICION comparacomplex(s,-i,1e-9)

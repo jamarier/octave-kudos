@@ -1,0 +1,90 @@
+NOMBRE: Condicionales con if
+REQUISITO: exp_docayuda
+REQUISITO: exp_programacion
+
+Los condicionales permiten ejecutar distintas tareas en función de una
+condición.
+
+Sintaxis básica: 
+
+  if (<CONDICION>) 
+    <TAREAS SI SE CUMPLE LA CONDICION>
+  endif
+
+Esta estructura permite ejecutar código en casos concretos.
+
+  if (<CONDICION>) 
+    <TAREAS A EJECUTAR SI SE CUMPLE LA CONDICION>
+  else
+    <TAREAS A EJECUTAR SI NO SE CUMPLE LA CONDICION>         
+  endif
+
+Esta segunda forma permite seleccionar un grupo de tareas en función
+de la condición dada. 
+
+En la ayuda de f:if hay más formas.
+
+CUANDO NO USARLO
+
+En el caso que el comando if se quiera usar para asignar valores a
+variable, es más efectivo emplear operaciones aritméticas mezclados
+con booleanos.
+
+Así una posible implementación de la función valor absoluto
+
+  if (X>=0) 
+    out = X;
+  else 
+    out = -X;
+  end;
+
+se podría implementar como
+
+out = (X>=0).*(X) + (X<0).*(-X)
+
+Entre las dos formas, la segunda tiene la ventaja de servir además
+para procesar vectores y matrices. En la primera forma
+habría que rodear el bloque f:if con un f:for.
+
+Otro ejemplo de no uso: 
+
+  if (X>=0) 
+    out = 3;
+  else 
+    out = 2;
+  end;
+
+se podría implementar como
+
+out = (X>=0).*(3) + (X<0).*(2)
+
+o incluso:
+
+out = (X>=0).*(3-2) + (2)
+
+
+CUANDO USARLO
+
+Se recomienda usar f:if en casos en los que se emplee para escoger una
+ruta o estrategia distinta en un algoritmo.
+
+  depuracion = 1;
+  if (depuracion) 
+    disp('Punto A');
+  endif
+
+o bien
+
+  B=1;
+  interpretacion = 1;
+  if (interpretacion) 
+    # 1er algoritmo (interpretado)
+    for i = 1:20
+      B=B*A;
+    endfor
+  else
+    # 2do algoritmo (compilado)
+    B=A^20;
+  endif
+
+SINVERIFICACION

@@ -1,0 +1,54 @@
+NOMBRE: Acceso a elementos de un vector
+OBJETIVO: Acceso a los elementos de un vector
+REQUISITO: exp_h15_16
+
+
+Para acceder a un elemento de un vector se pone a continuación del vector el
+número de posición del elemento que queremos obtener entre paréntesis. 
+
+EJEMPLO-IN: [11 21 31](1)
+
+o la variable que contiene el vector: 
+
+EJEMPLO-IN: A = [11 21 31]; A(1)
+
+Los elementos de un vector se numeran siempre a partir del 1. En el
+caso de un vector fila el elemento 1 es el que está más a la izquierda
+creciendo el número de posición cuando nos movemos a la derecha. En el
+caso de un vector columna, el elemento 1 es el superior. Creciendo la
+posición conforme se baja en el vector.
+
+Dentro de los paréntesis para especificar la posición, octave crea
+automáticamente una variable llamada f:end cuyo valor es la última
+posición válida del vector. 
+
+EJEMPLO-IN: A(end)
+
+Esta variable se puede emplear en cualquier expresión para acceder a otras
+posiciones. Como la penúltima:
+
+EJEMPLO-IN: A(end-1)
+
+o la antepenúltima:
+
+EJEMPLO-IN: A(end-2).
+
+Por último, si en vez de un número se le pasa un vector como indicador
+de posición, octave devolverá un vector compuesto por los elementos
+situados en las posiciones indicadas.
+
+EJEMPLO-IN: A=[1 2 3]; A([1 2 1 end (end-2)])
+EJEMPLO-OUT: [1 2 1 3 1]
+
+TAREA 
+
+Sobre el vector dado q:A, 
+VARIABLE: A,sin(1:501)
+
+* Asigne en r el elemento 10 por el final de A.
+VARIABLE: r,0
+VERIFICACION: Elemento 10 por el final CONDICION comparafloat(r,0.94250,1e-4)
+
+* Localice el elemento intermedio del vector A y asígnelo a s
+VARIABLE: s,0
+VERIFICACION: Elemento intermedio CONDICION comparafloat(s,-0.32159,1e-4)

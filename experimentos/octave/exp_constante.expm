@@ -1,0 +1,17 @@
+NOMBRE: Constantes
+OBJETIVO: dar a conocer las constantes más comunes
+REQUISITO: exp_bloque_escalar
+REQUISITO: exp_comparacion
+ 
+También hay definidas ciertas constantes como f:i, f:pi y f:e
+ 
+TAREA
+ 
+Verifique la identidad de Euler: e^(i*pi) == -1
+ 
+¿Qué obtenemos?
+¿Es lo que esperábamos?
+¿A qué se debe la discrepancia?
+ 
+SINVERIFICACION
+

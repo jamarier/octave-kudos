@@ -1,0 +1,26 @@
+NOMBRE: flip de matriz
+OBJETIVO: Matrices reflejas
+REQUISITO: exp_secuencia1
+REQUISITO: exp_operadorpunto
+REQUISITO: exp_h10_28_29_31_32
+
+Dos funciones más de manipulación de matrices:
+
+* f:flipud invierte el orden de las filas de la matriz 
+
+* f:fliprd invierte el orden de las columnas de la matriz
+
+TAREA
+
+La variable A, contiene una matriz. Asigne en B una matriz con los
+mismos elementos de forma que esté invertida de arriba a abajo y de
+derecha a izquierda.
+
+Así si A valiese [1 2 3; 4 5 6; 7 8 9], 
+B debería valer [9 8 7; 6 5 4; 3 2 1]
+
+VARIABLE: A, magic(20)
+VARIABLE: B,0
+VERIFICACION: B CONDICION all(all(B==fliplr(flipud(magic(20)))))
+
+

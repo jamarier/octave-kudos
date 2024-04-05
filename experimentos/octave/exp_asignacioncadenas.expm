@@ -1,0 +1,27 @@
+NOMBRE: Asignación de cadenas
+AUTOR: Javier M Mora
+OBJETIVO: Asignación de cadenas a variables
+REQUISITO: exp_visualizavar
+
+Además de almacenar números en variables, existen otros tipos de datos
+que se pueden asignar. Siendo la sintaxis siempre igual: 
+
+EJEMPLO-IN: nombre_variable = valor
+
+Sin entrar en qué es una cadena en octave, esta sirve para almacenar
+texto en una variable y se representa por el texto delimitado con
+comillas simples. (En octave se puede usar también las comillas
+dobles, pero no es compatible con matlab por lo que en este tutorial
+no se va a emplear nunca).
+
+Para asignar un texto a una variable, se emplea la sintaxis ya mencionada
+
+EJEMPLO-IN: A = 'un texto'
+
+Esta instrucción asignará la cadena "un texto" a la variable q:A.
+
+TAREA
+
+* Asigne a la variable q:A el valor f:tutorial
+VARIABLE: A, ''
+VERIFICACION: strcmp(A,'tutorial') CONDICION strcmp(A,'tutorial')

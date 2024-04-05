@@ -1,0 +1,47 @@
+NOMBRE: Componiendo matrices
+OBJETIVO: Componiendo matrices
+REQUISITO: exp_h17_19_21
+
+
+No existe el concepto de matriz de matrices. Cuando una matriz está
+dentro de otra matriz, esta se incorpora a la exterior cediendo sus
+datos a la exterior. Para que la operación tenga éxito las dimensiones
+han de ser coherentes. En el caso de vectores:
+
+EJEMPLO-IN: [ 1:10 ] == (1:10)
+EJEMPLO-IN: A = [ 1 2 3 ]; B = [10 20 A 30 40]
+
+Las matrices también pueden anexionarse empleando esta técnica, pero
+han de tener dimensiones compatibles: 
+
+EJEMPLO-IN: A = zeros(3,1), B = ones(3,2), C = [A B]
+
+para pegar matrices en vertical, se emplea el operador ";" 
+
+EJEMPLO-IN: A= zeros(1,3), B = ones(2,3), C = [A ; B]
+
+y combinaciones de pegado horizontal y vertical
+
+EJEMPLO-IN: A=zeros(2), B=ones(2), C = [A B ; B A]
+
+TAREA:
+
+* Pegue dos matrices de tamaños incompatibles y lea el mensaje de
+  error que obtiene
+
+* Construya en A una matriz de 5x5 con el siguiente contenido
+  1 0 0 1 1
+  0 1 0 1 1
+  0 0 1 0 0
+  0 0 1 1 0
+  0 0 1 0 1
+
+  Para ello ha de usar exclusivamente las funciones de construcción de
+  matrices f:eye, f:ones, f:zeros y los operadores de composición de
+  matrices.
+
+VARIABLE: A,0
+PREVERIFICACION: sol=[ eye(3) [ones(2) ; zeros(1,2)] ; zeros(2) ones(2,1) eye(2) ];
+VERIFICACION: A CONDICION all(all(A == sol))
+
+

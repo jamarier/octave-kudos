@@ -1,0 +1,21 @@
+NOMBRE: Operaciones escalar con matriz 
+OBJETIVO: Uso de operaciones de escalares con matrices
+REQUISITO: exp_secuencia1
+REQUISITO: exp_h34_35
+
+Aplicar una operación entre un número escalar y una matriz permite
+aplicar la misma operación a todos los elementos de la misma.
+
+EJEMPLO-IN: A=magic(3), 3*A, 3+A, A/3
+
+La operación división no se puede aplicar si la matriz está en el
+denominador: 3/A no es posible.
+
+TAREA
+
+VARIABLE: A,0
+
+* Defina una matriz 41x40 en (A) cuyos todos los valores sean iguales
+  a 3
+VERIFICACION: Matriz de 3 CONDICION comparamatriz(A/3,ones(41,40))
+

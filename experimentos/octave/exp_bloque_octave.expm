@@ -1,0 +1,11 @@
+NOMBRE: *** Manejo de Octave ***
+AUTOR: Javier M. Mora
+REQUISITO: .:exp_ayuda
+
+Este bloque presenta las características básicas de octave, así como
+las operaciones generales del sistema.
+
+Al finalizar este bloque se tendrá una noción de cómo escribir
+comandos en el prompt de octave, crear datos de prueba y manipular dichos datos.
+
+SINVERIFICACION

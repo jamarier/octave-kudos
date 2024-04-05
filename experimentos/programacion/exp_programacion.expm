@@ -1,0 +1,16 @@
+NOMBRE: *** Bloque de PROGRAMACION ***
+REQUISITO: octave:exp_bloque_octave
+
+Inicio del segundo bloque del tutorial.
+
+Hasta ahora se han visto funcionalidades de cálculo y el manejo de 
+octave de forma interactiva. A partir de ahora, se verá una 
+introducción a las capacidades de programación de octave.
+
+Si es necesario reforzar algún aspecto ya visto, los comandos:
+f:indice e f:irexperimento permiten localizar y revisitar los aspectos
+deseados.
+
+El comando f:ayuda muestra las distintas posibilidades de uso del tutorial.
+
+SINVERIFICACION

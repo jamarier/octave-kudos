@@ -1,0 +1,50 @@
+NOMBRE: Secuencias
+AUTOR: Javier M. Mora
+OBJETIVO: Trabajar con secuencias de números
+REQUISITO: exp_h6_7
+
+Un array o matriz en octave es un conjunto ordenado de números que puede
+emplearse para almacenar secuencias de números.
+
+EJEMPLO-IN: A=[1 2 3 4 5]
+
+Los números se incluyen dentro de corchetes y los números pueden estar
+separados por espacios o comas.
+
+Estos números pueden procesarse de forma independiente y simultánea
+empleando operadores con escalares:
+
+EJEMPLO-IN: [1 2 3] + 1
+EJEMPLO-OUT*: 'ans = [2 3 4]'
+EJEMPLO-IN: [1 2 3] * 2
+EJEMPLO-OUT*: 'ans = [2 4 6]'
+
+Muchas funciones aceptan un array como argumento, en cuyo caso se
+aplica la función a cada elemento del array y la salida es el conjunto
+de salida:
+
+EJEMPLO-IN:  sqrt([25 100 81])
+EJEMPLO-OUT*: 'ans = [5 10 9]'
+
+Tambien se pueden efectuar operaciones con dos conjuntos de números de
+forma que el primer elemento de un conjunto opere con el primero del
+segundo. Para ello hay que añadir al operador un punto "." antes. (Los
+dos conjuntos de números han de tener el mismo tamaño)
+
+EJEMPLO-IN: [1 2 3] .+ [10 20 30]
+EJEMPLO-OUT*: 'ans = [11 22 33]'
+
+EJEMPLO-IN: [1 2 3] .* [10 20 30]
+EJEMPLO-OUT*: 'ans = [10 20 90]'
+
+Un Array de arrays devuelve la concatenación de los arrays de entrada:
+EJEMPLO-IN: A=[1 2 3];B=[10 20];C=[A B [-1 -2]]
+EJEMPLO-OUT*: 'C=[1 2 3 10 20 -1 -2]'
+
+
+TAREA
+
+* Asigna a A el conjunto de números 3 1 4 1 5 1 6
+VARIABLE: A,[0 0 0 0 0 0 0]
+VERIFICACION: Tamaño de A CONDICION length(A) == 7
+VERIFICACION: A asignado CONDICION norm(A-[3 1 4 1 5 1 6]) == 0

@@ -1,0 +1,35 @@
+NOMBRE: Matrices 3
+OBJETIVO: Vectorización de una matriz 
+REQUISITO: exp_h52
+
+
+Existen ocasiones en la que puede ser interesante acceder a los
+elementos de una matriz por un índice único como si fuera un vector. 
+
+Octave permite acceder a los elementos de una matriz empleando un
+único índice. 
+
+EJEMPLO-IN: A=[1 2 3; 4 5 6]; A(5)
+EJEMPLO-OUT: [1 2 3; 4 5 6](5)
+
+Igualmente se pueden usar rangos y vectores para acceder a diversos
+elementos de la matriz. Concretamente
+
+EJEMPLO-IN: A(:)
+
+convierte la matriz en un vector.
+
+TAREA 
+
+Fíjese que un vector fila o un vector columna son realmente matrices y
+requeriría emplear dos índices para acceder a sus elementos. El índice
+único permite acceder a los elementos de los vectores
+independientemente de su orientación.
+
+Cree una matriz y vectorícela. ¿Qué tipo de vector se obtiene? ¿Vector
+fila o columna?
+
+¿En qué orden se acomodan las filas y columnas de la matriz en el
+vector?
+
+SINVERIFICACION

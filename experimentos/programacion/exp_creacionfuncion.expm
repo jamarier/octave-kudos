@@ -1,0 +1,40 @@
+NOMBRE: Creando una función
+REQUISITO: exp_programacion
+
+Como segundo sistema de automatización de tareas, octave permite la
+creación de funciones. Las funciones tienen dos características que
+los diferencian de los scripts:
+
+* Pueden ser invocados con argumentos para personalizar su ejecución.
+* Pueden devolver resultados de su ejecución.
+
+Para definir una función hay que usar una estructura de la forma: 
+
+function [x y z ...] = nombrefuncion(a,b,c,...)
+  instrucciones
+  ...
+endfunction
+
+Las distintas partes de la estructura son: 
+
+* "nombrefuncion" es el nombre de la función creada. Si la función
+  está definida en un fichero ".m", el nombre de la función ha de
+  coincidir con el nombre del fichero.
+
+  Si en un fichero ".m" hay más de una función definida, solo es
+  accesible desde el exterior la que coincide con el nombre del
+  fichero. El resto quedará como funciones accesorias ocultas (y solo
+  podrán usarse desde otras funciones del mismo fichero).
+
+* "a", "b", ... son los argumentos que se le pasan a la función. 
+
+* "x", "y", ... son los resultados de la función. La declaración de
+  las salidas implica la creación de variables locales del mismo
+  nombre. Cuando la ejecución de la función llega al final de la misma
+  o se llega a una instrucción f:return, octave devuelve los valores
+  de las variables indicadas en la declaración de la función en el
+  orden dado.
+
+
+
+SINVERIFICACION

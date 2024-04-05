@@ -1,0 +1,86 @@
+* DONE exp_continuas
+  Funciones definidas online
+* exp_continuas a tramos
+* DONE exp_secuencias
+** [ [1 2] [10 11]]
+* exp_secuencias2
+** [1:10]/10
+** [0.1:0.1:1]
+* exp_muestreo
+** aplicando a una función continua una secuencia* 
+* DONE Crear un índice de experimentos (Comando indice)
+
+* Otras tareas
+* Dependencias
+** Capacidad de renombrar experimentos sin romper las dependencias
+** Dependencias de conocimiento (que aparecen en las pistas) vs dependencias de orden (que no aparecen en las pistas)
+
+* OCTAVE
+
+** funciones lambda
+** Cadenas
+*** Contar el número de espacios de una cadena ( sum(CADENA==" ") 
+** Output texto
+*** disp
+*** printf
+**** salida pantalla o fichero
+**** formato cadena
+** Gráficos
+*** Leyendas en los gráficos
+*** Anotando gráficos
+*** colores
+*** movimiento por la gráfica
+*** formatos de puntos
+*** Etiquetas gráfico
+*** Mapas de colores (colormap)
+*** Exportación de gráficos
+**** ficheros e impresoras
+*** Gráficos 3D
+**** De monje
+**** Otras paramétricas
+**** mesh, meshgrid, surf
+**** contour plots (contour y contourc)
+*** Gestión de figures (figure, hold on, ...)
+**** Superponiendo gráficos
+**** Apilando gráficos
+*** Ejes
+**** Modificación de ejes para incluir valores
+**** Ratio gráficas de ejes
+     Resultado cuadrado
+     píxeles cuadrados
+**** Escalas logarítmicas
+*** Rejillas
+**** Lineas primarias y secundarias
+*** Funciones matrices
+**** rand
+**** diag (creación o lectura)
+**** rot90
+**** reshape
+**** sort
+*** Gestión del historial
+**** diary (on/off)
+**** fichero de historial del sistema .octave_hist
+*** Funciones de acceso a disco
+**** dir / ls
+**** path  o cd
+*** Paquetes
+**** instalación
+**** búsqueda de paquetes
+
+
+* Programación
+** creación de ayuda en funciones
+** switch o equivalente
+** número de Argumentos y argumentos opcionales
+** Salidas opcionales
+   o en función del tipo de salida requerida dar una salida u otra
+** Menus
+** entradas de texto
+** Path
+** bucles
+*** while
+*** do until
+*** breaks y continues
+** vectorización
+*** arrayfun
+** referencias a funciones y evaluación

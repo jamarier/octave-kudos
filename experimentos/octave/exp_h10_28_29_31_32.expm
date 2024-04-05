@@ -1,0 +1,72 @@
+NOMBRE: Matrices 2
+OBJETIVO: Accediendo a los elementos de una matriz 
+REQUISITO: exp_h24_25
+
+
+La forma más común de acceder a los elementos de una matriz es
+empleando dos índices (fila y columna)
+
+EJEMPLO-IN: A= [1 2 3 ; 4 5 6]; A(1,2)
+EJEMPLO-OUT: 2
+
+Al igual que ocurría con los vectores, en vez de un valor escalar se
+puede usar un vector o un rango (que sigue siendo un vector) en cada
+una de las coordenadas. En caso de emplear uno o más vectores, los
+elementos obtenidos serán todas las combinaciones posibles entre las
+coordenadas:
+
+EJEMPLO-IN: A(1:end,2)
+
+Devuelve todos los elementos de la matriz que tengan cualquier valor
+de fila y sean de la columna dos. Osea: devuelve la segunda columna.
+
+EJEMPLO-IN: A(2, 1:end)
+
+Devuelve la segunda fila íntegra.
+
+Para especificar una fila completa o columna completa se puede usar,
+como atajo, un indicador de rango sin límites:
+
+EJEMPLO-IN: A(:,2), A(2,:), A(:,:)
+
+que muestran respectivamente: segunda columna, segunda fila y la
+matriz completa.
+
+EJEMPLO-IN: A(1:2,2:3)
+
+que devuelve una submatriz compuesta por los elementos de las dos primeras
+filas y las columnas 2 y 3.
+
+
+Por último, no se está limitado al uso de rangos:
+
+EJEMPLO-IN: A([2 1 1], :)
+
+que devuelve una matriz en el que la primera fila es la segunda fila
+de A (A(2,:)) y su segunda y tercera filas son la primera de A e
+iguales entre si.
+
+EJEMPLO-IN: A([2 1 1], [1 2 2])
+
+Sería una nueva matriz 3x3 con los siguientes elementos:
+
+A(2,1)  A(2,2)  A(2,2)
+A(1,1)  A(1,2)  A(1,2)
+A(1,1)  A(1,2)  A(1,2)
+
+En función de los rangos o vectores escogidos, se puede obtener
+submatrices y/o reordenar las filas y columnas.
+
+TAREA
+
+La variable A, contiene una matriz. Asigne en B una matriz con los
+mismos elementos de forma que esté invertida de arriba a abajo y de
+derecha a izquierda.
+
+Así si A valiese [1 2 3; 4 5 6; 7 8 9], 
+B debería valer [9 8 7; 6 5 4; 3 2 1]
+
+VARIABLE: A, magic(20)
+VARIABLE: B,0
+VERIFICACION: B CONDICION all(all(B==fliplr(flipud(magic(20)))))
+

@@ -1,0 +1,55 @@
+NOMBRE: Imagenes monocanal
+OBJETIVO: Visualización de imágenes en escala de grises
+REQUISITO: exp_contourplots
+
+Toda matriz puede visualizarse como una imagen en escala de
+grises. Para ello utiliza la función f:imshow.
+
+La forma de asociar un valor de la matriz a un nivel de gris depende
+de cómo se almacenen los datos en la matriz.
+
+Para conocer el tipo de datos, se usa la funcion f:class.
+
+EJEMPLO-IN: A=magic(100);
+EJEMPLO-IN: class(A)
+
+* Si la matriz es tipo double, un 0 o menos representa negro, un 1 o
+  más representa el blanco intenso y los valores intermedios los
+  distintos niveles de gris.
+
+  Cualquier matriz double se puede normalizar dividiendolo por el máximo:
+
+EJEMPLO-IN: A = A/max(A(:))
+EJEMPLO-IN: imshow(A)
+
+  Si el mínimo no corresponde con el 0, se puede hacer tambien un
+  desplazamiento de niveles:
+
+EJEMPLO-IN: A = A - min(A(:))
+
+* Si la matriz es tipo uint8, un 0 es negro y 255 es blanco.
+
+  OJO: una variable tipo uint8 requiere especial cuidado al ser
+  normalizado. La división es entera (redondeada) lo que significa que
+  A/max(A(:)) será 0 o 1.
+
+  Y cualquier multiplicación saturará al llegar a 255. Así
+
+EJEMPLO-IN: a=uint8(1:0)
+EJEMPLO-IN: a*1000/100
+
+  siempre valdrá 3.
+
+* Hay otros tipos con otros límites, pero no los veremos aquí.
+
+TAREA
+
+* En la variable q:A hay una matriz. Visualicela tal cual con
+  imshow. ¿Cómo se vé? ¿Por qué?
+
+* Normalice q:A y guarde el resultado en q:B de forma que el valor
+  mínimo sea 0 y el máximo 1. Y vuelva a visualizarla.
+
+VARIABLE: A,magic(100)+100
+VARIABLE: B,0
+VERIFICACION: ajuste CONDICION B == (magic(100)/10000)

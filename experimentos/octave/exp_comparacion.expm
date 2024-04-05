@@ -1,0 +1,43 @@
+NOMBRE: Comparación de números.
+OBJETIVO: Comparando números. Uso de Booleanos
+REQUISITO: exp_bloque_escalar
+
+Si queremos verificar que dos términos (expresiones o variables)
+son idénticas, empleamos el operador "==". 
+
+En octave, el valor q:1 representa la verdad o lo cierto y el valor
+q:0 lo falso.
+
+Así, si q:s vale q:1
+EJEMPLO-IN: 2 == 1 + 1
+EJEMPLO-OUT: 1
+o 
+EJEMPLO-IN: 2*s == s+1
+EJEMPLO-OUT: 1
+
+pero 
+EJEMPLO-INOUT: 1 == 2
+
+Para que el operador "==" de un resultado de 1 los números han de ser
+exactamente iguales. 
+
+Existen otros operadores de comparación como "<", "<=", ">" y ">="
+cuyo resultado también devolverá 1 o 0 en función de si es cierto o no.
+
+En caso de querer comparar por desigualdad el operador a usar es "!=".
+
+TAREA
+ 
+* Pruebe los distintos operadores de comparación.
+
+* Considere la siguiente expresión: (1.001-0.001) == 1 
+
+  ¿Qué resultado debería dar? ¿Qué resultado se obtiene realmente?
+  ¿Por qué? 
+
+  A raíz de las respuestas anteriores, ¿cómo hay que actuar ante
+  cierto tipo de comparaciones?
+ 
+SINVERIFICACION
+
+

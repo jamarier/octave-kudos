@@ -1,0 +1,40 @@
+NOMBRE: Operaciones con complejos 2
+OBJETIVO: Operaciones básicas con complejos
+REQUISITO: exp_cplx1
+
+
+Operaciones típicas con complejos son las mismas que con números reales:
+
+* suma y diferencia
+EJEMPLO-INOUT: (2+1i) + (3+5i)
+EJEMPLO_INOUT: (2+i)-(3+5i)
+
+* producto y división
+EJEMPLO-INOUT: (2+1i)*(3+5i)
+EJEMPLO-INOUT: (2+i)/(3+5i)
+
+Más algunas específicas como:
+
+* módulo
+EJEMPLO-INOUT: abs(1+i)
+
+* fase
+EJEMPLO-INOUT: arg(i)
+
+* conjugado 
+EJEMPLO-INOUT: conj(3+4i)
+
+Es conveniente siempre poner paréntesis alrededor de una constante compleja ya que no sería 
+lo mismo la operación 
+EJEMPLO-IN: 1+i * 3+4i
+que
+EJEMPLO-IN: (1+i)*(3+4i)
+
+TAREA
+
+* Calcula manualmente el valor de salida de 1+i*3+4i y el valor de (1+i)*(3+4i)
+* Verifica que dichos valores no coinciden
+* Asigna a la variable q:s la diferencia entre estos valores
+VARIABLE: s,0
+VERIFICACION: valor de s CONDICION comparafloat(abs(s),2,1e-9)
+

@@ -1,0 +1,30 @@
+NOMBRE: Aplicacion de leyendas a graficas
+AUTOR: Daniel de los Reyes Leal
+AUTOR: Javier M. Mora
+OBJETIVO: Aplicar facilmente una leyenda a una grafica especificando el formato
+REQUISITO: exp_plot2
+
+Podemos utilizar el comando stem para representar señales discretas. Tras
+ejecutar este comando, podemos ejecutar los comandos 'xlabel', 'ylabel' y'title'
+para editar las leyendas del eje X, eje Y y leyenda, respectivamente.
+
+Estos tres comandos tienen la misma sintaxis de parámetros. El primer
+parámetro es el texto que se quiere mostrar y los siguientes
+parámetros van en parejas el primero el nombre del atributo y el
+segundo el valor de este.
+
+EJEMPLO-IN: plot(sin(0:0.1:10))
+EJEMPLO-IN: title("Este es el titulo", "fontsize", 24);
+EJEMPLO-IN: xlabel("Eje X", "fontsize", 24);
+
+Este ejemplo representa el titulo de la grafica con tamaño de letra 24.
+
+EJEMPLO-IN: ylabel("Eje Y", "fontsize", 24, "color", "red");
+
+Y este además cambia el color del texto.
+
+Para más información sobre las propiedades, ir a la sección de
+propiedades de los textos del manual de octave. Usando f:help y posteriormente
+Plotting > Graphics Data Structures > Graphics Object Properties > TextProperties
+
+SINVERIFICACION

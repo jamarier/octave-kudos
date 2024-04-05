@@ -1,0 +1,96 @@
+NOMBRE: Ejes de gráficas
+AUTOR: Cristina Padilla Carrero
+OBJETIVO: Modificar los ejes de gráficas
+REQUISITO: exp_leyenda
+
+Los ejes de abcisas y de ordenadas permiten saber visualmente qué 
+valores se representan en una gráfica. x es la coordenada del eje de
+abcisas e y es la coordenada del eje de ordenadas.
+
+Sintaxis básica:
+
+	axis([valor_bajo_x valor_alto_x valor_bajo_y valor_alto_y])
+
+El valor de las variables <valor_bajo_x>, <valor_alto_x>, 
+<valor_bajo_y> y <valor_alto_y> indica los valores mínimos 
+y máximos de los ejes x e y.
+
+	EJEMPLO-IN: figure();
+	EJEMPLO-IN: stem([2,3],[4,1]);
+	EJEMPLO-IN: axis([0 6 0 4]);
+
+Para dar un título a los ejes, se usa el comando q:xlabel 
+y q:ylabel para los ejes x e y respectivamente.
+
+Sintaxis básica:
+
+	axis([valor_bajo_x valor_alto_x valor_bajo_y valor_alto_y]);
+	xlabel(q:nombre_x);
+	ylabel(q:nombre_y);
+
+	EJEMPLO-IN: figure();
+	EJEMPLO-IN: stem([2,3],[4,1]);
+	EJEMPLO-IN: axis([0 6 0 4]);
+	EJEMPLO-IN: xlabel('Tiempo');
+	EJEMPLO-IN: ylabel('Distancia');
+
+Si no se desea ver los ejes en la gráfica pero si los valores de
+los puntos se debe añadir q:off después de los valores de los ejes
+en el comando axis. Igualmente, para activarlo se utiliza el comando 
+q:on que es el que viene por defecto.
+
+	EJEMPLO-IN: figure();
+	EJEMPLO-IN: stem([2,3],[4,1]);
+	EJEMPLO-IN: axis([0 6 0 4], 'off');
+
+Las marcas de los ejes aparecen por defecto. 
+Podemos usar el comando f:tic para activar las marcas de los ejes. 
+Además podemos añadir f:ticx o f:ticy que activaran las marcas 
+de uno de los ejes dejando las del otro desactivado. 
+
+	EJEMPLO-IN: figure();
+	EJEMPLO-IN: stem([2,3],[4,1]);
+	EJEMPLO-IN: axis([0 6 0 4], 'ticx');
+
+Las etiquetas de las marcas de los ejes también aparecen por defecto. 
+Podemos usar el comando f:label para activar las etiquetas de 
+los ejes. Además podemos añadir f:labelx o f:labely que activaran
+las etiquetas de uno de los ejes dejando las del otro desactivado. 
+  
+	EJEMPLO-IN: figure();
+	EJEMPLO-IN: stem([2,3],[4,1]);
+	EJEMPLO-IN: axis([0 6 0 4], 'labely');
+
+Si se desea invertir el eje y de manera que los valores más bajos 
+estén mas cerca de la parte alta de la figura, se usa el comando
+f:ij. Para deshacer la inversión se usa el comando f:xy.
+
+	EJEMPLO-IN: figure();
+	EJEMPLO-IN: stem([2,3],[4,1]);
+	EJEMPLO-IN: axis([0 6 0 4], 'ij');
+	 
+Para cambiar el aspecto en el que se ven los ejes, 
+se añade el comando f:square, f:equal o f:normal.
+f:square fuerza a la gráfica a un aspecto cuadrado, es decir, 
+que el eje x tendrá la misma longitud que el eje y.
+f:equal hace que las distancias entre los valores del eje x 
+y del eje y sean la misma.
+f:normal representa la gráfica de forma que encaje en la ventana 
+de la figura.
+
+Los límites de los ejes se pueden modificar usando 
+los comandos f:auto, f:manual y f:tight.
+f:auto ajusta los ejes de manera que sean visualmente agradables.
+f:manual es el valor por defecto, utiliza los límites especificados
+ por el usuario.
+f:tight ajusta los ejes a los límites de los datos.
+
+TAREA
+
+* Represente los puntos [2,4] y [3,1] (puntos usados en el ejemplo)
+ de manera que las marcas del eje y no aparezcan 
+y los valores x tampoco.
+
+* Represente los valores de manera que la gráfica tenga un aspecto 
+cuadrado y los ejes se ajusten a los límites de los datos.
+SINVERIFICACION

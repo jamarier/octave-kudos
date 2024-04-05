@@ -1,0 +1,49 @@
+NOMBRE: Operaciones básicas y el formato numérico
+OBJETIVO: Jugar con la coma flotante
+REQUISITO: exp_constante
+
+El entorno de trabajo se comporta como una calculadora científica.
+Entre otras funciones están disponibles: 
+
+  Los operadores básicos: +, -, *, /, ( ), y ^
+ 
+Los números pueden emplear notación de coma fija o de coma flotante:
+ 3, 5, 3e5, 3.2, 2.1e-1, ...
+ 
+TAREA
+
+Véanse los siguientes ejemplos: 
+
+EJEMPLO-IN: 1e-100*2/2
+EJEMPLO-OUT: 1e-100*2/2
+Si escribimos "1e-100*2/2" nos da un resultado correcto.
+ 
+En cambio, si el número es manifiestamente más pequeño...
+EJEMPLO-IN: 1e-1000*2/2
+EJEMPLO-OUT: 1e-1000*2/2
+ 
+Esto es, el número 1e-1000 es tan pequeño que el sistema no es capaz
+de trabajar con él y lo sustituye por un cero.
+ 
+* Determínese (por ensayo y error) el valor de un número positivo
+  distinto de cero que no presenta errores de resolución y asígnese a
+  la variable q:s; pero que su mitad si lo presente.
+
+  Se pretende buscar un número tan pequeño que esté en el límite de la
+  representación de números de octave y por tanto que el
+  resultado de las operaciones básicas de aritmética sea erróneo.
+
+  El ejemplo más sencillo de operación para verificar que estamos en
+  el límite es tomar un número y multiplicarlo y dividirlo por una
+  constante. Si el resultado difiere del número original es que dicho
+  número es ya demasiado pequeño para trabajar con él.
+
+  Pista: se aconseja el empleo de instrucciones compuestas tipo: 
+  s= 1, verificar
+  y el empleo de los cursores.
+
+VARIABLE: s,0
+VERIFICACION: ¿es q:s positivo y distinto de cero? CONDICION s>0
+VERIFICACION: q:s no presenta error resolución CONDICION s==s*2/2
+VERIFICACION: s/2 si presenta error de resolucion CONDICION ( s/2 == 0 | (s/2) ~= (s/2)*2/2 )
+

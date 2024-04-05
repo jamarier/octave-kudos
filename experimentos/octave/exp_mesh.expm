@@ -1,0 +1,50 @@
+NOMBRE: Función mesh
+AUTOR: Daniel Fernández Romero
+OBJETIVO: Comprender cómo se utiliza y para qué sirve la función mesh
+REQUISITO: exp_plot2
+REQUISITO: exp_ejes
+
+La función f:mesh de Octave es una función que nos permite
+representar funciones en un espacio tridimensional.
+
+Previamente al uso de la función f:mesh, será necesario aplicar la
+parametrización de Monge a la expresión matemática que será
+representada.
+
+Tras esto, la función f:mesh puede ser utilizada siguiendo una serie
+de pasos, que son:
+
+1) Definir los ejes X e Y donde la función será
+   representada: x = inicioX:pasoX:finX , y = inicioY:pasoY:finY
+
+2) Generar el f:grid (cuadrícula) donde será dibujado
+   el modelo 3D: [xx,yy] = meshgrid(x,y)
+   (Nótese que el hecho de generar una cuadrícula es lo mismo que
+    generar coordenadas, las cuales serán utilizadas para que la
+    función q:z tome valores)
+
+3) Definir la función q:z : z = f(xx,yy)
+   (Se deben utilizar los valores generados en el paso anterior)
+
+4) Dibujar el modelo 3D: mesh(x,y,z)
+
+A continuación se expone un ejemplo que puede ser directamente
+utilizado en la consola de Octave para representar la famosa
+función del sombrero mexicano:
+
+EJEMPLO-IN: x = -5:0.5:5;
+EJEMPLO-IN: y = -5:0.5:5;
+EJEMPLO-IN: [xx,yy] = meshgrid(x,y);
+EJEMPLO-IN: z = cos(xx).*cos(yy);
+EJEMPLO-IN: mesh(x,y,z);
+
+
+TAREA
+
+* Obtenga la representación en 3D de la función z = x^2 - y^2 
+  aplicando el procedimiento visto en el ejemplo.
+
+* Obtenga la representación en 3D de la función z = x^2 + x*y^3 + y^5
+  aplicando el procedimiento visto en el ejemplo.
+
+SINVERIFICACION

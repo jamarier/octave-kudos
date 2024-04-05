@@ -1,0 +1,64 @@
+NOMBRE: Mapas de color
+AUTOR: Cristina Padilla Carrero
+AUTOR: Javier M. Mora
+REQUISITO: exp_imagen
+# 20160917 Bastante reescritura. Cómo se usa con ejemplos.
+OBJETIVO: Cómo usar mapas de color
+
+Es posible aplicar falso color a una imagen monocanal. De esta forma,
+en vez de ver la imagen en escala de grises, se puede ver con colores
+que aumenten el contraste de la imagen y ayude a una mejor percepción.
+
+Para aplicar falso color a la imagen, el primer paso es establecer la
+correspondencia entre cada nivel de intensidad con el color que se
+quiere mostrar.
+
+Aunque esta correspondencia se puede efectuar a mano, es más práctico usar
+funciones de paleta de colores como:
+
+EJEMPLO-IN: autumn(10);
+EJEMPLO-IN: gray(10);
+EJEMPLO-IN: jet(10);
+EJEMPLO-IN: bone(10);
+
+Para ver las paletas disponibles:
+
+EJEMPLO-IN: doc gray
+
+Donde el número indica el número de colores que se generarán y, por
+tanto, los niveles de cuantización que sufrirá los niveles de
+intensidad que sufrirá la matriz antes de representarse.
+
+La función f:colormap activa la paleta deseada en la figura activa en
+el momento. Y puede ser llamada con una paleta o con el nombre de la
+misma:
+
+EJEMPLO-IN: colormap(gray(255));
+EJEMPLO-IN: colormap("autumn");
+
+Para saber los nombres de paletas soportados
+EJEMPLO-IN: colormap("list");
+
+Información más detallada:
+
+La paleta o mapa de colores define la correspondencia
+entre los valores de cada elemento de una matriz y el color que será
+desplegado.  Se utilizan para mostrar un mapa de bits de banda única
+de manera coherente con los mismos colores. Cada valor de píxel está
+asociado con un color, que se define como un conjunto de valores de
+rojo, verde y azul (RGB).
+
+El colormap cmap debe ser una matriz de N filas por 3 
+columnas(R,G,B), siendo N el número de colores en el mapa. 
+En cada fila se guarda un color con sus valores de intensidad 
+de rojo, verde y azul respectivamente; codificados por un número 
+entre 0 y 1.
+
+TAREA
+
+VARIABLE: A,0
+
+* Asigne a la variable q:A una paleta hsv de 31 colores
+
+VERIFICACION: Verificando los valores de A CONFIRMACION: A==hsv(31)
+

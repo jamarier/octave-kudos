@@ -1,0 +1,31 @@
+NOMBRE: La diagonal de una matriz
+AUTOR: Jesús García Salinas
+OBJETIVO: Extraer la diagonal de una matriz
+REQUISITO: exp_funcionmatriz
+REQUISITO: exp_maxmin
+
+La diagonal de una matriz, que pasar ser más exactos sería la diagonal
+principal, queda definida por los elementos situados desde "a(1,1)"
+hasta "a(n,n)", es decir, los elementos que van desde la esquina
+superior izquierda en diagonal (dirección sur-este) hasta un borde de
+la matriz: "a(1,1), a(2,2), a(3,3), ... a(n,n)".
+
+Cálculo de diagonal de una matriz cuadrada:
+
+EJEMPLO-IN: A=magic(3)
+
+Queda pues declarada la matriz A.
+
+Para calcular su diagonal, se hace mediante "diag(A)" y el resultado 
+se muestra en forma de vector, con los valores: "[8 5 2]"
+
+TAREA
+
+VARIABLE: A, magic(100)
+VARIABLE: r, 0
+
+* Una vez realizado asigne a la variable "r" de resultado, 
+  el resultado del uso de la función "diag()" sobre la matriz "A".
+
+
+VERIFICACION: Diagonal de una matriz, CONDICION comparaMatriz(r,diag(A))

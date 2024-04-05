@@ -1,0 +1,53 @@
+NOMBRE: Consiguiendo Ayuda de octave
+OBJETIVO: Buscando ayuda del sistema
+REQUISITO: exp_compuesto
+# puntos 1-5 de Hiebeler
+
+
+Octave proporciona una serie de comandos para obtener información
+sobre funciones definidas en el sistema. Estas son:
+
+* f:help muestra la ayuda existente en la definición de los
+  comandos. Puede mostrar información sobre: argumentos de llamada,
+  ejemplos de uso, qué y cómo se devuelven los resultados o el nombre
+  de funciones relacionadas.
+
+EJEMPLO-IN: help ones
+
+  Para mostrar la ayuda sobre un operador este debe de aparecer entre
+  comillas.
+
+EJEMPLO-IN: help '/'
+
+* f:doc remite a documentación externa sobre la función
+  solicitada. Si la documentación externa no está instalada, octave
+  dará un mensaje de error.
+
+EJEMPLO-IN: doc ones
+
+* f:lookfor busca por contenido en la ayuda. Se hace la consulta de
+  los términos en los que se está interesado y f:lookfor devuelve las
+  funciones que mencionan esos términos en su descripción.
+
+EJEMPLO-IN: lookfor taylor
+
+* Si se desea encontrar dónde está definida una función (para ver el
+  código fuente), f:which muestra información sobre los símbolos
+  definidos y su localización.
+
+TAREA
+
+* Pruebe los ejemplos y compare resultados.
+
+Normalmente, el  comando f:lookfor busca los términos en la primera
+línea de la descripción. 
+
+* Busque el argumento  que hay que usar con la  función f:lookfor para
+  que la búsqueda  se efectúe en todas  las líneas de la  ayuda de las
+  funciones. Asigne a la variable q:A dicho argumento. 
+
+  (Se recuerda que para asignar una cadena  de texto se ha de usar las
+  comillas simples).
+VARIABLE: A, ''
+VERIFICACION: Opción CONDICION strcmp(A,'-all')
+

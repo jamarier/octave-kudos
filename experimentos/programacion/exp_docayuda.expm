@@ -1,0 +1,41 @@
+NOMBRE: Comentarios en los Scripts mostrados en help
+AUTOR: Juan Ramón Ríos Fernández
+OBJETIVO: Añadir mensajes de ayuda en los scripts del usuario 
+REQUISITO: exp_creacionscript
+REQUISITO: exp_programacion
+
+Octave permite incluir cuando creas una función o script unas lineas 
+a modo de comentario que figuren como ayuda(help) del mismo.
+
+Para definir la ayuda de una función, se escribe justo antes de la 
+definición, cabecera del archivo, el texto que se quiera. Se comienza
+cada linea con "%", además debe dejar una linea en blanco desde que 
+finaliza el texto hasta la función.
+
+La ayuda se mostrara al usuario en consola cuando teclee en el prompt
+“help x”, siendo “x” el nombre de la función.
+
+Para añadir comentarios de ayuda a un script.
+
+EJEMPLO-IN: 
+% Calcula el promedio de los elementos de un vector y dibuja dicho vector
+% Sintaxis: promedio(x) donde x es el vector a promediar
+
+function p = promedio(x)
+
+Para mostrar la ayuda de de la función anterior tecleamos lo siguiente
+
+EJEMPLO-IN: help promedio
+
+TAREA
+ 
+* Localiza una función, por ejemplo f:plot
+  EJEMPLO-IN: which plot
+
+* Con un editor de texto mira las primeras líneas del archivo
+  donde está la ayuda. 
+ 
+SINVERIFICACION
+
+
+

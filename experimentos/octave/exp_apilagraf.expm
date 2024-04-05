@@ -1,0 +1,75 @@
+NOMBRE: Dibujar dos graficos en la misma gráfica
+AUTOR: Daniel Fernández Romero
+OBJETIVO: Comprender cómo se dibujan dos gráficos en la misma gráfica
+REQUISITO: exp_mapacolor
+
+A veces, es interesante dibujar dos gráficos en una misma gráfica para
+realizar comparaciones entre ambos.
+
+Octave proporciona una función que nos permite realizar esto. Dicha
+función es la función f:subplot . Dicha función es de la forma
+siguiente: subplot(numeroDeFilas, numeroDeColumnas, indiceDelGráfico)
+
+La idea es interpretar la gráfica como una matriz de gráficos con la
+siguiente estructura:
+
+		       __1__|__2__|__3__
+		       __4__|__5__|__6__
+		         7  |  8  |  9
+
+El número colocado en cada celda de la matriz de gráficos es
+precisamente el índice de dicho gráfico. Para el caso que estamos
+considerando, la matriz tiene la siguiente estructura:
+
+		1  |  2			__1__
+					  2
+
+Por tanto, tenemos dos casos.
+
+El primer caso es dibujar ambos gráficos de forma adyacente, es
+decir, uno junto a otro. Los pasos a seguir son:
+
+1) Definir los gráficos a dibujar: graph1 , graph2
+
+2) Utilizar la función subplot, siguiendo el patrón siguiente:
+   subplot(1,2,1); graph1; subplot(1,2,2); graph2;
+   (Si no se sigue el patrón indicado, Octave devolverá un error)
+
+El segundo caso es dibujar ambos gráficos de forma que uno esté
+encima del otro. Los pasos a seguir son:
+
+1) Definir los gráficos a dibujar: graph1 , graph2
+
+2) Utilizar la función subplot, siguiendo el patrón siguiente:
+   subplot(2,1,1); graph1; subplot(2,1,2); graph2;
+   (Si no se sigue el patrón indicado, Octave devolverá un error)
+
+
+A continuación, se presenta un ejemplo que dibuja dos gráficos
+de forma adyacente en la misma gráfica. Las gráficas representan
+las funciones coseno y seno, respectivamente (estableciendo un
+intervalo de representación):
+
+EJEMPLO-IN: subplot(1,2,1); fplot(@sin, [-2,2]); 
+EJEMPLO-IN: subplot(1,2,2); fplot(@cos, [-2,2]);
+
+Importante: no siempre es necesario el uso de la función f:fplot .
+En este caso se utiliza para representar funciones elementales ya
+definidas en Octave. Sin embargo, pueden utilizarse otras funciones
+(como f:mesh o f:contour), siempre y cuando éstas devuelvan un
+gráfico.
+
+
+TAREA
+
+* Obtenga la gráfica que contenga dos gráficos, uno junto a otro, de
+  las funciones elementales logaritmo en base 2 y exponencial
+  utilizando el procedimiento visto en el ejemplo. Utilice el
+  intervalo adecuado para que los gráficos representen
+  resultados coherentes, es decir, tenga en cuenta el dominio de
+  ambas funciones.
+
+* Repita el ejercicio anterior para que los gráficos se vean uno
+  encima del otro.
+
+SINVERIFICACION

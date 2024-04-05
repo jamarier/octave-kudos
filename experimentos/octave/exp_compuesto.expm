@@ -1,0 +1,26 @@
+NOMBRE: Ocultando resultados y encadenamiento de operaciones
+REQUISITO: exp_asignacioncadenas
+#OBJETIVO: Apreciando la diferencia entre , y ; para separar operaciones
+
+Cuando en una operación no nos interese su mostrar
+su resultado, podemos acabarla con ";" 
+ 
+Si queremos mostrar el resultado, podemos no añadir nada
+o acabar la operación con "," 
+ 
+Podemos encadenar varias operaciones en una misma línea
+siempre que estén separadas entre si por "," o ";"
+ 
+Así: 
+EJEMPLO-IN: 1+2,1i+4i,1+5
+Mostrará todas las respuestas y en cambio: 
+EJEMPLO-IN: s=1;s=s*2,s+1
+Mostrará sólamente los dos últimos resultados.
+
+TAREA
+
+* Piense en el resultado que debe obtener en cada ejemplo dado
+
+* Ejecute los ejemplos propuestos 
+
+SINVERIFICACION

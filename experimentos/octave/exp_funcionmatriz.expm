@@ -1,0 +1,56 @@
+NOMBRE: Funciones sobre matriz 
+OBJETIVO: Uso de funciones sobre matrices
+REQUISITO: exp_escalarmatriz
+
+En función de cómo se comporta una función respecto a una matriz
+podemos clasificarla en tres categorías:
+
+* Funciones diseñadas para su uso en matrices. 
+
+  Estas funciones requieren de una matriz como argumento y es
+  procesada completamente para obtener un resultado. Por ejemplo, la
+  función f:det toma una matriz y calcula su determinante.
+EJEMPLO-IN: A = magic(3)
+EJEMPLO-IN: det(A)
+
+* Funciones diseñadas para su uso con vectores.
+
+  Estas funciones tienen sentido su uso en vectores o listas de
+  números. Por ejemplo, la función: f:sum calcula la suma de una lista
+  de números. 
+
+  Si una de estas funciones se aplica a una matriz, la función se
+  aplica a cada columna dando como resultado un vector con tantos
+  elementos como columnas tuviera la matriz original. 
+
+  Para procesar todos los elementos de una matriz con una de estas
+  funciones se puede: 
+
+  * aplicar dos veces la función 
+EJEMPLO-IN: sum(sum(A))
+  
+  * vectorizar la matriz. Esta opción es más eficiente.
+EJEMPLO-IN: sum(A(:))
+
+* Funciones diseñadas para el uso de escalares.
+
+  En cuyo caso, la función se aplica a cada elemento de la matriz
+  devolviéndose una matriz del mismo tamaño que el original. 
+EJEMPLO-IN: sin(A)  
+
+En general, aunque en la realidad no ocurra así, puede considerarse
+que la aplicación de una función sobre la matriz se efectúa de forma
+simultánea.
+
+TAREA
+
+VARIABLE: A,0
+
+* Calcúlese el coseno de 0, pi/100, 2pi/100, ... pi y asigne el valor
+  a la matriz A.
+
+  Para ello se recomienda el uso de rangos, productos por escalares, y
+  la aplicación simultánea de la operación coseno.
+
+VERIFICACION: coseno CONDICION comparamatrizfloat(A,cos((0:pi:100*pi)/100),1e-4)
+

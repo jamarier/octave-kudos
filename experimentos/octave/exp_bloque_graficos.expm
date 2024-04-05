@@ -1,0 +1,18 @@
+NOMBRE: * Generación de gráficos *
+AUTOR: Javier M. Mora
+OBJETIVO: * Aprender a generar gráficos y anotarlos *
+REQUISITO: exp_bloque_vectores_matrices
+REQUISITO: exp_comparacion
+REQUISITO: exp_h34_35
+REQUISITO: exp_mat2
+REQUISITO: exp_bloque_vectores_matrices
+
+Generación de gráficos
+
+* De líneas continuas
+
+* De datos discretos
+
+* Añadir Título y ejes
+
+SINVERIFICACION

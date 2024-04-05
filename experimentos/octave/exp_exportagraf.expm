@@ -1,0 +1,47 @@
+NOMBRE: Exportar gráficos
+AUTOR: Cristina Padilla Carrero
+OBJETIVO: Cómo se exportan gráficos. 
+REQUISITO: exp_apilagraf
+
+Exportar gráficos sirve para guardar los gráficos en un archivo. 
+Por defecto se guarda en la carpeta del directorio actual de Octave.
+
+Sintaxis básica:
+
+	print 'Nombre_archivo.formato';
+
+	EJEMPLO-IN: print 'Ejemplo.png';	
+
+Por defecto exporta la figura actual. Para guardar una figura 
+determinada se usa este comando:
+
+	print -fh=Numero_figura 'Nombre_archivo.formato';
+
+	EJEMPLO-IN: print -fh=7 'Ejemplo.pdf';	
+
+  
+JPG: Es un formato que usa un algoritmo para compresión de imágenes 
+con pérdida de calidad.
+Esta diseñada para obtener buenos rendimientos (calidad/tamaño).
+
+PNG: Formato libre diseñado para aplicaciones en Internet. 
+Los datos de la imagen son almacenados usando un algoritmo
+de compresión sin pérdida y con muy buenos rendimientos 
+para una gran variedad de tipos de imágenes.
+
+PNM: Este formato incluye los formatos de imagen PPM, PGM y PBM.
+Se utilizan para almacenar imágenes color RGB, imágenes en escala 
+de gris e imágenes blanco-negro respectivamente. 
+
+GIF: Es un formato gráfico utilizado en Internet, tanto para imágenes
+como para animaciones. Es más eficiente para realizar la compresión
+ de la imagen ya que no pierden calidad. 
+
+PDF: Formato de almacenamiento de documentos digitales independiente
+de plataformas de software o hardware. Puede cifrarse para proteger
+su contenido e incluso firmarlo digitalmente y no puede modificarse.
+
+TAREA
+
+* Exporte un gráfico en formato png.
+SINVERIFICACION

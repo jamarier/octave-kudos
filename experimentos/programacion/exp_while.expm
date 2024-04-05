@@ -1,0 +1,19 @@
+NOMBRE: Bucles con salida condicionada
+REQUISITO: exp_for
+REQUISITO: exp_programacion
+
+Los bucles f:while permiten la repetición de una porción de código en
+de la que se desconoce de antemano cuántas veces se ejecutará. 
+
+El final de la ejecución se determina cuando se cumpla la condición
+expresada.
+
+  while(<CONDICION>)
+    <CODIGO A REPETIR>
+  endwhile 
+
+CUANDO NO USARLO
+
+Cuando se conozca el número de iteraciones a realizar.
+
+SINVERIFICACION

@@ -1,0 +1,61 @@
+NOMBRE: Dibujando secuencias de números
+OBJETIVO: Dibujo de señales "continuas"
+REQUISITO: exp_bloque_graficos
+
+Cuando la cantidad de datos que se maneja es muy elevada, se buscan
+distintos métodos de representación de dichos datos. Por ejemplo, el
+empleo de descriptores estadísticos (fuera de los objetivos de este
+tutorial).
+
+Otro sistema poderoso de representación de la información es el empleo
+de gráficos. En el que visualmente se pueda hacer uno una idea de las
+características de los datos presentes.
+
+La función f:plot muestra puntos en el plano: 
+
+EJEMPLO-IN: X=(1:20), Y= sin(1:20), plot(X,Y)
+
+toma el primer elemento de X lo empareja con el primero de Y y
+representa el punto (x,y), luego toma el siguiente número de X e Y y
+lo empareja igualmente y así, hasta que todos los puntos estén
+emparejados.
+
+Por defecto, la gráfica se pinta uniendo los puntos consecutivos. 
+
+Una forma simplificada de mostrar los datos es omitir el vector X. 
+
+EJEMPLO-IN: Y= sin(1:20), plot(Y)
+
+en cuyo caso, se empleará como X el índice (la posición) de cada valor
+del vector de Y representado. Por lo tanto, los dos ejemplos
+anteriores son equivalentes.
+
+Por defecto, la función f:plot une los puntos representados. Se puede
+indicar que marque el punto y no los una, pasando una cadena de descripción de formato: 
+
+EJEMPLO-IN: Y = sin(1:20), plot(Y,'+')
+
+En esa cadena se puede especificar si se quieren los datos unidos, el
+signo gráfico, y color entre otras cosas.
+
+TAREA
+
+* Léase la ayuda de f:plot
+
+* Si se prueban los ejemplos, se verá que los puntos están muy
+  separados mostrando una curva senoidal muy imprecisa. Determine una
+  forma de que la misma gráfica con más puntos, pero sin alterar la gráfica. 
+
+  Es decir siga ocurriendo que y=sen(x) con x entre [1,20].
+
+  Asigne al vector A los valores de las abcisas (las X) y a B los
+  valores de las ordenadas (las Y) para poder pintar la gráfica como
+  plot(A,B)
+
+VARIABLE: A, 0
+VARIABLE: B, 0
+
+VERIFICACION: Valor mínimo de las abcisas CONDICION min(A(:))==1
+VERIFICACION: Valor máximo de las abcisas CONDICION max(A(:))==20
+VERIFICACION: Numero de puntos de abcisas CONDICION length(A)>20
+VERIFICACION: Función seno CONDICION comparamatrizfloat(B,sin(A),0.01)

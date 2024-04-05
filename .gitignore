@@ -1,0 +1,6 @@
+build
+octavekudos-*
+*.old
+experimentos/debug
+*.dot
+*.dot.pdf

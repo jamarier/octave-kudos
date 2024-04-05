@@ -1,0 +1,49 @@
+NOMBRE: Creación de ficheros script
+REQUISITO: exp_creacionfuncion
+REQUISITO: exp_programacion
+
+Un script es una secuencia de comandos que se ejecutan en
+el orden que están escritos en un fichero.
+
+Los scripts son útiles para almacenar procesamientos que serían
+incómodos de teclear en el prompt del sistema debido a su longitud.
+
+La sintaxis de los ficheros es idéntica lo que se escribiría de forma
+interactiva: 
+
+* Las funciones con sus argumentos se escriben separadas por retornos
+  de carro, "," o ";" en función de si se quiere mostrar el resultado
+  de la operación.
+
+* Si una línea resulta demasiado larga, esta se puede dividir situando
+  en el punto deseado de división puntos suspensivos ("...") y
+  continuar el texto en la línea siguiente.
+
+* el caracter "%" sirve como inicio de comentario (hasta el final de
+  la línea). Existe una jerarquía de comentarios que se debe respetar
+  ya que es el usado por el sistema automático de extracción de ayudas
+  de octave:
+
+  * un comentario de tres caracteres por ciento "%%%" se considera un
+    comentario que se aplica a todo el fichero. Este tipo de
+    comentario sirve para describir la funcionalidad del fichero,
+    información de autoría, etc.  
+
+  * un comentario de dos por cientos "%%" es un comentario de
+    bloque. Comenta y delimita un bloque de código (hasta el siguiente
+    "%%" o el final del fichero). En función de la herramienta de
+    depuración del código, este se puede ejecutar bloque a bloque.
+
+  * Un comentario simple "%" es un comentario de linea 
+
+Los scripts son ficheros con extensión ".m" y para invocarlos se ha de
+escribir el nombre del script sin extensión.
+
+* Para editar un fichero de script, se puede usar cualquier editor de
+  texto plano. Si se tiene configurado un editor de sistema, se puede
+  invocar el comando f:edit desde octave y este se abrirá (o dará
+  error en caso de no tener ningún editor definido).
+
+EJEMPLO-IN: edit exp_creacionscript.m
+
+SINVERIFICACION

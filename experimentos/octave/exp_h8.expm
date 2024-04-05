@@ -1,0 +1,42 @@
+NOMBRE: Matrices
+OBJETIVO: Creación de matrices
+REQUISITO: exp_bloque_vectores_matrices
+REQUISITO: exp_operadorpunto
+REQUISITO: exp_h9
+
+
+La matriz es el tipo fundamental de octave. Es una organización
+bidimensional de datos en la que todas las filas tienen el mismo
+tamaño.
+
+Para construir una matriz se emplea una sintaxis similar a la de la
+construcción de vectores donde las filas se separan con punto y coma
+";":
+
+EJEMPLO-IN: A= [1 2 3 ; 4 5 6]
+#EJEMPLO-OUT: [1 2 3; 4 5 6]
+
+Todos los tipos básicos en octave son realmente matrices: 
+
+* Los números 
+* Los vectores
+* Las cadenas
+
+Para ver las dimensiones de una matriz se emplea la función f:size:
+
+EJEMPLO-IN: size(123)
+EJEMPLO-IN: size([1 2 3])
+EJEMPLO-IN: size('cadena de texto')
+
+Para construir una matriz se emplea una sintaxis similar a la de las
+construcción de vectores. 
+
+TAREA
+
+* Construya una matriz cuadrada 3x3 en A con los siguientes valores:
+     1 4 7 
+     2 5 8
+     3 6 9
+
+VARIABLE: A,0
+VERIFICACION: valor de A CONDICION all(all(A == [1 4 7;2 5 8;3 6 9]))

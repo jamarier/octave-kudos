@@ -1,0 +1,50 @@
+NOMBRE: Rangos
+OBJETIVO: Creación de rangos
+REQUISITO: exp_secuencia1
+
+
+Un rango no es más que un vector de números ordenados en los que la
+distancia entre cada número es constante.
+
+El rango más sencillo es el de incrementos en uno. Este tiene la forma
+"inicio:fin". Que producirá un vector con los elementos inicio,
+inicio+1, inicio+2, inicio+3, ... mientras que inicio+i sea inferior o
+igual a fin.
+
+EJEMPLO-IN: 1:10
+EJEMPLO-IN: 1.1:10
+
+Un segundo rango es aquel que además introduce el paso o distancia
+entre los elementos. Este rango tiene la forma "inicio:paso:fin"
+
+EJEMPLO-IN: 1:2:10
+
+El rango puede tener un paso negativo. 
+EJEMPLO-IN: 10:-1:1
+
+Cuando las condiciones del rango no se pueden cumplir, octave devuelve
+un vector vacío: 
+EJEMPLO-IN: 10:1
+
+Por cuestiones de preferencia de operadores, se aconseja siempre
+proteger los rangos metiéndolos entre paréntesis o corchetes
+
+EJEMPLO-IN: (54:60.2)
+EJEMPLO-IN: [54:0.5:60]
+
+TAREA
+
+Recordándose que se puede reordenar los elementos de un vector
+empleando un vector de posiciones, 
+
+EJEMPLO-IN: A=[10 11 12]; A = A([3 2 1])
+
+* Asigne en B el vector A invertido.
+VARIABLE: A,sin(1:501)
+VARIABLE: B,0
+VERIFICACION: Orden invertido CONDICION all(B == sin(501:-1:1))
+
+* Asigne en C un subvector de A que comprenda los elementos desde el
+  100 hasta el 120 (inclusives).
+VARIABLE: C,0
+VERIFICACION: Subvector CONDICION all(C == sin(100:120))
