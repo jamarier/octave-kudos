@@ -39,4 +39,4 @@ TAREA
      3 6 9
 
 VARIABLE: A,0
-VERIFICACION: valor de A CONDICION all(all(A == [1 4 7;2 5 8;3 6 9]))
+VERIFICACION: valor de A CONDICION all(all(v:A == [1 4 7;2 5 8;3 6 9]))

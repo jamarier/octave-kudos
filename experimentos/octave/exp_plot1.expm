@@ -55,7 +55,7 @@ TAREA
 VARIABLE: A, 0
 VARIABLE: B, 0
 
-VERIFICACION: Valor mínimo de las abcisas CONDICION min(A(:))==1
-VERIFICACION: Valor máximo de las abcisas CONDICION max(A(:))==20
-VERIFICACION: Numero de puntos de abcisas CONDICION length(A)>20
-VERIFICACION: Función seno CONDICION comparamatrizfloat(B,sin(A),0.01)
+VERIFICACION: Valor mínimo de las abcisas CONDICION min(v:A(:))==1
+VERIFICACION: Valor máximo de las abcisas CONDICION max(v:A(:))==20
+VERIFICACION: Numero de puntos de abcisas CONDICION length(v:A)>20
+VERIFICACION: Función seno CONDICION comparamatrizfloat(v:B,sin(v:A),0.01)

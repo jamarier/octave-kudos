@@ -1,0 +1,20 @@
+NOMBRE: Tareas Alumnos
+OBJETIVO: Tareas usadas con los alumnos 
+REQUISITO: exp_otrasutilidades
+
+Se desarrolló el tutorial como prueba piloto en 3 fases:
+
+1.- Se les proporcionó un tutorial básico de manejo de
+    octave (código fuente y el generado en octave)
+
+2.- Se les distribuyó un manual de instrucciones (disponible
+    en el repositorio) con las herramientas de generación.
+
+3.- Se crearon trabajos voluntarios para los alumnos con 
+    un paquete de experimentos para desarrollar. 
+
+4.- Se volvió a distribuir la versión del tutorial con
+    los experimentos creados por los alumnos. (Esta fase 
+    fuera de tiempo de evaluación)
+
+SINVERIFICACION

@@ -1,0 +1,24 @@
+NOMBRE: Portada
+OBJETIVO: *** Portada de la presentación ***
+REQUISITO: octave:exp_exportagraf, programacion:exp_velocidad
+
+*************
+* TAEE 2024 *
+*************
+
+DSL for the development of interactive tutorials in MATLAB/Octave
+
+Javier M. Mora-Merchán
+Samuel Dominguez
+Pilar Cano-Lozano
+Juan I. Guerrero
+Antonio Parejo
+Carlos Leon
+
+email: jmmora@us.es
+Department of Electronic Technology
+Universidad de Sevilla
+
+https://github.com/jamarier/octave-kudos
+
+SINVERIFICACION

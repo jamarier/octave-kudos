@@ -24,4 +24,4 @@ TAREA
 
 * Asigne a la variable q:A el valor f:tutorial
 VARIABLE: A, ''
-VERIFICACION: strcmp(A,'tutorial') CONDICION strcmp(A,'tutorial')
+VERIFICACION: strcmp(A,'tutorial') CONDICION strcmp(v:A,'tutorial')

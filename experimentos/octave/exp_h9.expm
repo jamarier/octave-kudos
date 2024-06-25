@@ -47,8 +47,8 @@ VARIABLE: A,sin(1:501)
 
 * Asigne en r el elemento 10 por el final de A.
 VARIABLE: r,0
-VERIFICACION: Elemento 10 por el final CONDICION comparafloat(r,0.94250,1e-4)
+VERIFICACION: Elemento 10 por el final CONDICION comparafloat(v:r,0.94250,1e-4)
 
 * Localice el elemento intermedio del vector A y asígnelo a s
 VARIABLE: s,0
-VERIFICACION: Elemento intermedio CONDICION comparafloat(s,-0.32159,1e-4)
+VERIFICACION: Elemento intermedio CONDICION comparafloat(v:s,-0.32159,1e-4)

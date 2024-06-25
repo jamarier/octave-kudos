@@ -1,6 +1,5 @@
 NOMBRE: Medida de rendimiento
-REQUISITO: exp_while
-REQUISITO: exp_programacion
+REQUISITO: exp_programacion, exp_while
 
 Es importante entender que muchos de los algoritmos de procesamiento
 de datos aunque más o menos sencillos, hay que aplicarlos a miles o

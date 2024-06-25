@@ -1,0 +1,24 @@
+NOMBRE: Test Unitarios
+OBJETIVO: Los tutoriales se basan en test unitarios
+REQUISITO: exp_portada
+
+Cada experimento consta en una explicación 
+y una serie (opcional) de tests unitarios 
+
+Por ejemplo:
+
+Para asignar un valor a una variable, ponga
+el nombre de la variable el signo igual y el valor
+deseado.
+
+EJEMPLO-IN: a = 12
+
+TAREA
+
+VARIABLE: x, 0
+
+* Asigne a la variable x el valor de 2
+
+
+VERIFICACION: Valor de x CONDICION comparamatriz(v:x,2)
+

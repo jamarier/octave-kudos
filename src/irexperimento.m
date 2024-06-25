@@ -1,4 +1,5 @@
 %% usage: irexperimento(NUM)
+%% usage: irexperimento NUM
 %%
 %% Va al experimento indicado por NUM 
 %%
@@ -13,7 +14,7 @@
 
 function irexperimento(nuevonumexp)
   global numexp;
-  numexp=nuevonumexp;
+  numexp=str2double(nuevonumexp);
   
   experimento(0);
 end

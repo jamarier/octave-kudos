@@ -22,4 +22,4 @@ TAREA
 * Constrúyase un vector entre 2 y 7 (inclusive) con 4 elementos cuya
   razón entre elementos consecutivos sea constante y asígnese en A.
 VARIABLE: A,0
-VERIFICACION: Vector A CONDICION all(comparafloat(A,[2.0000   3.0366   4.6104   7.0000],1e-4))
+VERIFICACION: Vector A CONDICION all(comparafloat(v:A,[2.0000   3.0366   4.6104   7.0000],1e-4))

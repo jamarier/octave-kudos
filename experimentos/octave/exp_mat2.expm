@@ -28,4 +28,4 @@ VARIABLE: r, 0
   el resultado del uso de la función "diag()" sobre la matriz "A".
 
 
-VERIFICACION: Diagonal de una matriz, CONDICION comparaMatriz(r,diag(A))
+VERIFICACION: Diagonal de una matriz, CONDICION comparaMatriz(v:r,diag(v:A))

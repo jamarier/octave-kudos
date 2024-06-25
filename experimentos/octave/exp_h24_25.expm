@@ -42,6 +42,6 @@ TAREA:
 
 VARIABLE: A,0
 PREVERIFICACION: sol=[ eye(3) [ones(2) ; zeros(1,2)] ; zeros(2) ones(2,1) eye(2) ];
-VERIFICACION: A CONDICION all(all(A == sol))
+VERIFICACION: A CONDICION all(all(v:A == sol))
 
 

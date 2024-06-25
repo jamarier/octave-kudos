@@ -49,5 +49,5 @@ línea de la descripción.
   (Se recuerda que para asignar una cadena  de texto se ha de usar las
   comillas simples).
 VARIABLE: A, ''
-VERIFICACION: Opción CONDICION strcmp(A,'-all')
+VERIFICACION: Opción CONDICION strcmp(v:A,'-all')
 

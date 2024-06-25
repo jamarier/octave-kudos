@@ -17,8 +17,8 @@ TAREA
 
 * Asigne a la variable q:A el valor q:2 tal y como se muestra en el ejemplo
 VARIABLE: A, 0
-VERIFICACION: A==2 CONDICION A==2
+VERIFICACION: A==2 CONDICION v:A==2
 
 * Asigne a la variable q:s el valor 3.
 VARIABLE: s, 0
-VERIFICACION: s==3 CONDICION s==3
+VERIFICACION: s==3 CONDICION v:s==3

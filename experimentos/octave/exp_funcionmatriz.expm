@@ -52,5 +52,5 @@ VARIABLE: A,0
   Para ello se recomienda el uso de rangos, productos por escalares, y
   la aplicación simultánea de la operación coseno.
 
-VERIFICACION: coseno CONDICION comparamatrizfloat(A,cos((0:pi:100*pi)/100),1e-4)
+VERIFICACION: coseno CONDICION comparamatrizfloat(v:A,cos((0:pi:100*pi)/100),1e-4)
 

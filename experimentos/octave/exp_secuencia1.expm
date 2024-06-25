@@ -46,5 +46,5 @@ TAREA
 
 * Asigna a A el conjunto de números 3 1 4 1 5 1 6
 VARIABLE: A,[0 0 0 0 0 0 0]
-VERIFICACION: Tamaño de A CONDICION length(A) == 7
-VERIFICACION: A asignado CONDICION norm(A-[3 1 4 1 5 1 6]) == 0
+VERIFICACION: Tamaño de A CONDICION length(v:A) == 7
+VERIFICACION: A asignado CONDICION norm(v:A-[3 1 4 1 5 1 6]) == 0

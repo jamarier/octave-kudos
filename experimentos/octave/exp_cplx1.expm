@@ -21,4 +21,4 @@ TAREA
 
 * Asigna a la variable q:s el número -i
 VARIABLE: s,0
-VERIFICACION: s == -i CONDICION comparacomplex(s,-i,1e-9)
+VERIFICACION: s == -i CONDICION comparacomplex(v:s,-i,1e-9)

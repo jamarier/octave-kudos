@@ -30,7 +30,7 @@ if (verificando==0)
 [[Inicializacion]]
 
   % mostrando el texto informativo
-  disp([ ...
+  disp([  '',...
 [[Texto]]...
        ]);
 else
@@ -93,17 +93,16 @@ while (my $line = $io->getline) {
 	      $texto .= $t."banderaejemplo(['ans = ',num2str($esc)]),char(10),...\n" }
   elsif ($line =~ /^\s*CODIGO:\s*(.*)$/)
       { my $esc = escapetexto($1);
-        $texto .= $t."'>> $esc',...\n";
+        #$texto .= $t."'>> $esc',...\n";
         $texto .= "  ]);\n";
         $texto .= "  $esc\n";
-        $texto .= "  disp([ ...\n";
+        $texto .= "  disp([  '',...\n";
       }
   elsif ($line =~ /^\s*TAREA:?\s*$/)
       { $texto .= $t."cabeceratarea,...\n" }
   elsif ($line =~ /^\s*VARIABLE:\s*(\w+)\s*,\s*(.*)\s*$/)
       { 
-	      $declaracion .= "global $1;\n";
-	      $inicializacion .= "  $1=$2;\n";
+	      $inicializacion .= "  assignin('base','$1',$2);\n";
       }
   elsif ($line =~ /^\s*PREVERIFICACION:\s*(.*)\s*$/)
       { 
@@ -159,6 +158,7 @@ $plantilla = rellenaplantilla($plantilla,
 			      'Inicializacion' => $inicializacion);
 
 $plantilla =~ s/(f|q):(\w+)/"$2"/g;
+$plantilla =~ s/(v):(\w+)/evalin('base','$2')/g;
 $plantilla =~ s/(g):(\w+)/$2/g;
 
 # salida

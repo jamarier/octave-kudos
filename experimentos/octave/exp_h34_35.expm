@@ -21,6 +21,6 @@ B debería valer [9 8 7; 6 5 4; 3 2 1]
 
 VARIABLE: A, magic(20)
 VARIABLE: B,0
-VERIFICACION: B CONDICION all(all(B==fliplr(flipud(magic(20)))))
+VERIFICACION: B CONDICION all(all(v:B==fliplr(flipud(magic(20)))))
 
 

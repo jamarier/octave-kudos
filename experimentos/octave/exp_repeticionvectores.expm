@@ -37,7 +37,7 @@ VARIABLE: A,0
   0 1 0 1 0 1
   1 0 1 0 1 0 
   1 0 0 1 0 1
-VERIFICACION: Variable de ayuda CONDICION comparamatriz(A,repmat(eye(2),2,3))
+VERIFICACION: Variable de ayuda CONDICION comparamatriz(v:A,repmat(eye(2),2,3))
 
 VARIABLE: B,0
 
@@ -47,4 +47,4 @@ VARIABLE: B,0
   elementos sean igual a 1, seguido de 50 elementos igual a 0, de 10
   elementos igual a 2 y nuevamente 10 elementos igual a 1.
 
-VERIFICACION: Composicion B CONDICION comparamatriz(B,repelems([0 1 2],[2 1 3 2; 50 50 10 10]))
+VERIFICACION: Composicion B CONDICION comparamatriz(v:B,repelems([0 1 2],[2 1 3 2; 50 50 10 10]))

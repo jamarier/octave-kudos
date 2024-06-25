@@ -7,17 +7,17 @@ Para usar una variable, solo hay que indicar su nombre.
 VARIABLE: s,3
 Si s==3, entonces se tiene que
 EJEMPLO-IN: s+3 
-EJEMPLO-OUT: s+3
+EJEMPLO-OUT: v:s+3
  
 Si se quiere saber el valor de una variable, escriba la variable en la
 linea de comandos directamente o emplee la función f:disp tal y como se
 muestra en los siguientes ejemplos:
 
 EJEMPLO-IN: s
-EJEMPLO-OUT: s
+EJEMPLO-OUT: v:s
 
 EJEMPLO-IN: disp(s)
-EJEMPLO-OUT*: disp(s)
+EJEMPLO-OUT*: disp(v:s)
 
 * Defina la variable "s" asignandole distintos valores
 

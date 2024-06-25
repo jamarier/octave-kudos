@@ -60,5 +60,5 @@ VARIABLE: A,0
 
 * Asigne a la variable q:A una paleta hsv de 31 colores
 
-VERIFICACION: Verificando los valores de A CONFIRMACION: A==hsv(31)
+VERIFICACION: Verificando los valores de A CONFIRMACION: v:A==hsv(31)
 

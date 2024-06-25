@@ -43,7 +43,7 @@ de trabajar con él y lo sustituye por un cero.
   y el empleo de los cursores.
 
 VARIABLE: s,0
-VERIFICACION: ¿es q:s positivo y distinto de cero? CONDICION s>0
-VERIFICACION: q:s no presenta error resolución CONDICION s==s*2/2
-VERIFICACION: s/2 si presenta error de resolucion CONDICION ( s/2 == 0 | (s/2) ~= (s/2)*2/2 )
+VERIFICACION: ¿es q:s positivo y distinto de cero? CONDICION v:s>0
+VERIFICACION: q:s no presenta error resolución CONDICION v:s==v:s*2/2
+VERIFICACION: s/2 si presenta error de resolucion CONDICION ( v:s/2 == 0 | (v:s/2) ~= (v:s/2)*2/2 )
 

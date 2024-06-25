@@ -17,5 +17,5 @@ VARIABLE: A,0
 
 * Defina una matriz 41x40 en (A) cuyos todos los valores sean iguales
   a 3
-VERIFICACION: Matriz de 3 CONDICION comparamatriz(A/3,ones(41,40))
+VERIFICACION: Matriz de 3 CONDICION comparamatriz(v:A/3,ones(41,40))
 

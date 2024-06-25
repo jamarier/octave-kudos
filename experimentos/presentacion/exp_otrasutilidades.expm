@@ -1,0 +1,25 @@
+NOMBRE: Otras utilidades
+OBJETIVO: Utilidades automáticas del tutorial
+REQUISITO: exp_lenguajesencillo
+
+Los experimentos se generan a partir de un 
+formato de texto sencillo que se convierte a 
+código octave.
+
+En el proceso, se generan índices útiles:
+
+EJEMPLO-IN: indice
+Lista todos los experimentos disponibles
+
+EJEMPLO-IN: glosario
+Lista palabras clave y funciones discutidas
+
+EJEMPLO-IN: glosario termino
+Lista experimentos que discuten el término indicado
+
+EJEMPLO-IN: pista
+Lista experimentos con los conocimientos previos requeridos
+para procesar el actual
+
+SINVERIFICACION
+

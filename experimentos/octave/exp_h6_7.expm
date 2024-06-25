@@ -37,10 +37,10 @@ TAREA
 * Construya un vector con la fecha de hoy (en formato iso: año, mes y
   día) y asígnelo a la  variable q:A. 
 VARIABLE: A,0
-VERIFICACION: fecha de hoy CONDICION all(A == round(clock)(1:3))
+VERIFICACION: fecha de hoy CONDICION all(v:A == round(clock)(1:3))
 
 * Luego construya un vector columna en q:B que sea la transpuesta de
   A.
 VARIABLE: B,0
-VERIFICACION: B CONDICION all(A==B')
+VERIFICACION: B CONDICION all(v:A==(v:B)')
 

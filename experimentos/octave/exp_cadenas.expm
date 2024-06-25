@@ -24,10 +24,10 @@ TAREA
 VARIABLE: A,'' 
 
 * Asigne a A la palabra "hola" 
-VERIFICACION: Cadena "hola" CONDICION comparastring(A,'hola')
+VERIFICACION: Cadena "hola" CONDICION comparastring(v:A,'hola')
 
 
 VARIABLE: B,''
 * Asigne a B una cadena con la palabra "hola" repetida 100 veces (sin
   espacios)
-VERIFICACION: Cadena 'hola'x100 CONDICION comparastring(B,repmat(A,1,100))
+VERIFICACION: Cadena 'hola'x100 CONDICION comparastring(v:B,repmat(v:A,1,100))

@@ -23,4 +23,4 @@ siendo log la definición de un logaritmo en otra base (10 o e normalmente)
 * Asigna a q:s el logaritmo en base 3 de 10
 VARIABLE: s,0
 #PREVERIFICACION: disp(s)
-VERIFICACION: s == log_3(10) CONDICION comparafloat(3^s,10,1e-9)
+VERIFICACION: s == log_3(10) CONDICION comparafloat(3^v:s,10,1e-9)

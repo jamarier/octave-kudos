@@ -1,0 +1,11 @@
+NOMBRE: fulloctave
+OBJETIVO: El entorno de trabajo es Octave 
+REQUISITO: exp_testunitarios
+
+El entorno de trabajo es octave, con todas las opciones posibles de trabajo.
+
+EJEMPLO-IN: x=1:100; y=2*x; plot(x,y)
+
+CODIGO: x=1:100; y=2*x; figure(1); plot(x,y);
+
+SINVERIFICACION

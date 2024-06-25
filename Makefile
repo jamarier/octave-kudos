@@ -25,6 +25,7 @@ BLOQUES+= $(INPUTDIR)/.
 #BLOQUES+= $(INPUTDIR)/debug
 BLOQUES+= $(INPUTDIR)/octave
 BLOQUES+= $(INPUTDIR)/programacion
+BLOQUES+= $(INPUTDIR)/presentacion
 
 BORRABLE+= octave-core
 BORRABLE+= *~

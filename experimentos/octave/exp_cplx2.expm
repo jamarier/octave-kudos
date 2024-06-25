@@ -36,5 +36,5 @@ TAREA
 * Verifica que dichos valores no coinciden
 * Asigna a la variable q:s la diferencia entre estos valores
 VARIABLE: s,0
-VERIFICACION: valor de s CONDICION comparafloat(abs(s),2,1e-9)
+VERIFICACION: valor de s CONDICION comparafloat(abs(v:s),2,1e-9)
 

@@ -1,0 +1,30 @@
+NOMBRE: Lenguaje Sencillo de descripción de experimentos
+OBJETIVO: Mostrar un ejemplo de fuente de experimento 
+REQUISITO: exp_fulloctave
+
+El lenguaje usado es muy sencillo y está orientado a linea.
+
+Cada línea tiene una funcionalidad específica definido
+por una etiqueta. 
+
+Por ejemplo, podemos definir ejemplos de código, que
+el alumno debe escribir.
+
+EJEMPLO-IN: a=12
+
+Hay más comandos disponibles, descritas en la comunicación.
+
+También podemos marcar palabras como g:glosario para
+que aparezcan en el glosario.
+
+TAREA
+
+VARIABLE: x, 0
+
+(El comando VARIABLE asigna una variable, que será 
+usada luego en la verificación)
+
+* Asigne a la variable x el valor de 2
+
+VERIFICACION: Valor de x CONDICION comparamatriz(v:x,2)
+

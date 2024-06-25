@@ -42,9 +42,9 @@ EJEMPLO-IN: A=[10 11 12]; A = A([3 2 1])
 * Asigne en B el vector A invertido.
 VARIABLE: A,sin(1:501)
 VARIABLE: B,0
-VERIFICACION: Orden invertido CONDICION all(B == sin(501:-1:1))
+VERIFICACION: Orden invertido CONDICION all(v:B == sin(501:-1:1))
 
 * Asigne en C un subvector de A que comprenda los elementos desde el
   100 hasta el 120 (inclusives).
 VARIABLE: C,0
-VERIFICACION: Subvector CONDICION all(C == sin(100:120))
+VERIFICACION: Subvector CONDICION all(v:C == sin(100:120))
